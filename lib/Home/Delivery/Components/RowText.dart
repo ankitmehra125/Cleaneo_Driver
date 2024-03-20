@@ -123,7 +123,7 @@ class _TwoTextState extends State<TwoText> {
                 children: [
                   Container(
                     width: double.infinity,
-                    height: mQuery.size.height * 0.26,
+                    height: mQuery.size.height * 0.28,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(6),
                       color: Colors.white,
@@ -159,7 +159,18 @@ class _TwoTextState extends State<TwoText> {
                                   Icon(Icons.lock_open_outlined,
                                     color: Color(0xff29b2fe),),
                                   SizedBox(width: mQuery.size.width*0.02,),
-                                  Text("Order #1234567890")
+                                  Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text("Order #1234567890",style: TextStyle(
+                                        fontSize: 12,
+                                      ),),
+                                      Text("COD",style: TextStyle(
+                                        fontSize: 10
+                                      ),)
+                                    ],
+                                  )
                                 ],
                               ),
                             ),
@@ -279,7 +290,7 @@ class _TwoTextState extends State<TwoText> {
                   SizedBox(height: mQuery.size.height*0.033,),
                   Container(
                     width: double.infinity,
-                    height: mQuery.size.height * 0.26,
+                    height: mQuery.size.height * 0.28,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(6),
                       color: Colors.white,
@@ -308,7 +319,18 @@ class _TwoTextState extends State<TwoText> {
                                 Icon(Icons.lock_open_outlined,
                                   color: Color(0xff29b2fe),),
                                 SizedBox(width: mQuery.size.width*0.02,),
-                                Text("Order #1234567890")
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text("Order #1234567890",style: TextStyle(
+                                      fontSize: 13
+                                    ),),
+                                    Text("Online",style: TextStyle(
+                                      fontSize: 10
+                                    ),)
+                                  ],
+                                )
                               ],
                             ),
                           ),
@@ -488,8 +510,8 @@ class _TwoTextState extends State<TwoText> {
                                     padding: const EdgeInsets.symmetric(
                                         horizontal: 16.0),
                                     child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
+                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
                                         Row(
                                           mainAxisAlignment:
@@ -502,13 +524,21 @@ class _TwoTextState extends State<TwoText> {
                                             const SizedBox(
                                               width: 6.0,
                                             ),
-                                            Text(
-                                              'Order ${order['orderNumber']}',
-                                              style: TextStyle(
-                                                  color: Colors.black,
-                                                  fontSize:
-                                                      mQuery.size.height * 0.015,
-                                                  fontFamily: 'PoppinsSemiBold'),
+                                            Column(
+                                              mainAxisAlignment : MainAxisAlignment.center,
+                                              children: [
+                                                Text(
+                                                  'Order ${order['orderNumber']}',
+                                                  style: TextStyle(
+                                                      color: Colors.black,
+                                                      fontSize:
+                                                          mQuery.size.height * 0.015,
+                                                      fontFamily: 'PoppinsSemiBold'),
+                                                ),
+                                                Text("COD",style: TextStyle(
+                                                    fontSize: 10
+                                                ),)
+                                              ],
                                             ),
                                           ],
                                         ),

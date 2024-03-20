@@ -148,7 +148,7 @@ class _MyEarningstabsState extends State<MyEarningstabs> {
             ),
           ),
         ),
-        const SizedBox(height: 20),
+        // const SizedBox(height: 20),
         Expanded(
           child: ListView.builder(
             itemCount: _tabData[_selectedIndex][0]["orders"]!.length,
@@ -200,7 +200,7 @@ class _MyEarningstabsState extends State<MyEarningstabs> {
                             Text(
                               'Order: ${order["orderNumber"]}',
                               style: const TextStyle(
-                                  fontSize: 16.0, fontWeight: FontWeight.w600),
+                                  fontSize: 13.0, fontWeight: FontWeight.w600),
                             ),
                             // SizedBox(height: 5.0),
                             Text(
@@ -215,17 +215,17 @@ class _MyEarningstabsState extends State<MyEarningstabs> {
                         const Spacer(),
                         if (order["onlineMode"] == "Yes")
                           Text(
-                            'Online: ${order["earning"]}',
+                            '${order["earning"]}',
                             style: const TextStyle(
-                                fontSize: 15.0,
+                                fontSize: 13.0,
                                 fontWeight: FontWeight.w600,
                                 color: Color(0xFF29B2FE)),
                           ),
                         if (order["onlineMode"] == "No")
                           Text(
-                            'Cash: ${order["earning"]}',
+                            '${order["earning"]}',
                             style: const TextStyle(
-                                fontSize: 15.0,
+                                fontSize: 13.0,
                                 fontWeight: FontWeight.w600,
                                 color: Color(0xFF13A32B)),
                           ),

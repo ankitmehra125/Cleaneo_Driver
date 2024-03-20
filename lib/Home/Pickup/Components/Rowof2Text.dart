@@ -132,7 +132,7 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                    },
                    child: Container(
                      width: double.infinity,
-                     height: mQuery.size.height * 0.26,
+                     height: mQuery.size.height * 0.28,
                      decoration: BoxDecoration(
                        borderRadius: BorderRadius.circular(6),
                        color: Colors.white,
@@ -299,7 +299,7 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                     },
                     child: Container(
                       width: double.infinity,
-                      height: mQuery.size.height * 0.26,
+                      height: mQuery.size.height * 0.28,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(6),
                         color: Colors.white,
@@ -493,7 +493,7 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                           }));
                         },
                         child: Container(
-                            height: mQuery.size.height * 0.28,
+                            height: mQuery.size.height * 0.26,
                             margin: const EdgeInsets.only(bottom: 21.0),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(6),

@@ -283,12 +283,21 @@ class _RatingPageState extends State<RatingPage> {
           content: Padding(
             padding:
                 EdgeInsets.symmetric(horizontal: mQuery.size.width * 0.033),
-            child: const Text(
-              "Your review is successfully "
-              "submitted!",
-              style: TextStyle(
-                fontFamily: 'SatoshiMedium',
-              ),
+            child:  Column(
+              children: [
+                Text(
+                  "Your review is successfully ",
+                  style: TextStyle(
+                    fontFamily: 'SatoshiMedium',
+                  ),
+                ),
+                Text(
+                  "submitted!",
+                  style: TextStyle(
+                    fontFamily: 'SatoshiMedium',
+                  ),
+                ),
+              ],
             ),
           ),
           actions: <Widget>[

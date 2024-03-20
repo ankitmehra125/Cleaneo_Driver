@@ -13,7 +13,78 @@ class PendingDetailsPage extends StatefulWidget {
   State<PendingDetailsPage> createState() => _PendingDetailsPageState();
 }
 
+var _itemValue = ValueNotifier<int>(1); // for shirt
+var _itemValue1 = ValueNotifier<int>(1); // for lehenga
+
+var _itemValue2 = ValueNotifier<int>(1);
+var _itemValue3 = ValueNotifier<int>(1); // for night suit
+var _itemValue4 = ValueNotifier<int>(1); // for waistcoat
+
+var _itemValue5 = ValueNotifier<int>(1); // for Blouse Designer
+var _itemValue6 = ValueNotifier<int>(1); // for shorts
+var _itemValue7 = ValueNotifier<int>(1); // for skirt
+var _itemValue8 = ValueNotifier<int>(1); // for swimming costume
+var _itemValue9 = ValueNotifier<int>(1); // for innerWear
+var _itemValue10 = ValueNotifier<int>(1); // for socks
+var _itemValue11 = ValueNotifier<int>(1); // for frock
+var _itemValue12 = ValueNotifier<int>(1); // for jump suit
+
+bool _editTapped = false;
+
+var blouseNo = 03;
+var lehengaNo = 01;
+var evDressNo = 01;
+var nightSuiteNo = 02;
+var waistSuitNo = 02;
+var shortNo = 02;
+var skirtNo = 02;
+var sCNo = 01;
+var inWearNo = 06;
+var socksNo = 01;
+var frockNo = 02;
+var jumpSuitNo = 02;
+
+var kurtaDesignerNo = 02;
+var bedSheetNo = 01;
+var batheMateNo = 01;
+
+var shirtPrice = 10.0;
+var blousePrice = 30.0;
+var lehengaPrice = 180.0;
+var evPrice = 190.0;
+var nightSuitPrice = 45.0;
+var waistCoatPrice = 50.0;
+var shortPrice = 25.0;
+var skirtPrice = 25.0;
+var sCPrice = 30.0;
+var inWearPrice = 15.0;
+var socksPrice = 10.0;
+var frockPrice = 35.0;
+var jumpSuitePrice = 50.0;
+var kurtaDesignerPrice = 30.0;
+var bedSheetPrice = 50.0;
+var bathMatePrice = 30.0;
+
+double totalShirtPrice = _itemValue.value * shirtPrice;
+double totalBlousePrice = blouseNo * blousePrice;
+double totalLehengaPrice = lehengaNo * lehengaPrice;
+double totalEvPrice = evDressNo * evPrice;
+double totalNighSuitPrice = nightSuiteNo * nightSuitPrice;
+double totalWaistCoastPrice = waistSuitNo * waistCoatPrice;
+double totalShortPrice = shortNo * shortPrice;
+double totalSkirtPrice = skirtNo * skirtPrice;
+double totalScPrice = sCNo * sCPrice;
+double totalinWearPrice = inWearNo * inWearPrice;
+double totalSocksPrice = socksNo * socksPrice;
+double totalfrockPrice = frockNo * frockPrice;
+double totalJumpSuitPrice = jumpSuitNo * jumpSuitePrice;
+
+double totalKurtaDesignerPrice = kurtaDesignerNo * kurtaDesignerPrice;
+double totalBedSheetPrice = bedSheetNo * bedSheetPrice;
+double totalBathMatePrice = batheMateNo * bathMatePrice;
+
 class _PendingDetailsPageState extends State<PendingDetailsPage> {
+
 
   @override
   Widget build(BuildContext context) {
@@ -22,75 +93,6 @@ class _PendingDetailsPageState extends State<PendingDetailsPage> {
     var userName = "Shweta";
     TextEditingController searchController2 = TextEditingController();
 
-    var _itemValue = ValueNotifier<int>(1); // for shirt
-    var _itemValue1 = ValueNotifier<int>(1); // for lehenga
-
-    var _itemValue2 = ValueNotifier<int>(1);
-    var _itemValue3 = ValueNotifier<int>(1); // for night suit
-    var _itemValue4 = ValueNotifier<int>(1); // for waistcoat
-
-    var _itemValue5 = ValueNotifier<int>(1); // for Blouse Designer
-    var _itemValue6 = ValueNotifier<int>(1); // for shorts
-    var _itemValue7 = ValueNotifier<int>(1); // for skirt
-    var _itemValue8 = ValueNotifier<int>(1); // for swimming costume
-    var _itemValue9 = ValueNotifier<int>(1); // for innerWear
-    var _itemValue10 = ValueNotifier<int>(1); // for socks
-    var _itemValue11 = ValueNotifier<int>(1); // for frock
-    var _itemValue12 = ValueNotifier<int>(1); // for jump suit
-
-    bool _editTapped = false;
-
-    var blouseNo = 03;
-    var lehengaNo = 01;
-    var evDressNo = 01;
-    var nightSuiteNo = 02;
-    var waistSuitNo = 02;
-    var shortNo = 02;
-    var skirtNo = 02;
-    var sCNo = 01;
-    var inWearNo = 06;
-    var socksNo = 01;
-    var frockNo = 02;
-    var jumpSuitNo = 02;
-
-    var kurtaDesignerNo = 02;
-    var bedSheetNo = 01;
-    var batheMateNo = 01;
-
-    var shirtPrice = 10.0;
-    var blousePrice = 30.0;
-    var lehengaPrice = 180.0;
-    var evPrice = 190.0;
-    var nightSuitPrice = 45.0;
-    var waistCoatPrice = 50.0;
-    var shortPrice = 25.0;
-    var skirtPrice = 25.0;
-    var sCPrice = 30.0;
-    var inWearPrice = 15.0;
-    var socksPrice = 10.0;
-    var frockPrice = 35.0;
-    var jumpSuitePrice = 50.0;
-    var kurtaDesignerPrice = 30.0;
-    var bedSheetPrice = 50.0;
-    var bathMatePrice = 30.0;
-
-    double totalShirtPrice = _itemValue.value * shirtPrice;
-    double totalBlousePrice = blouseNo * blousePrice;
-    double totalLehengaPrice = lehengaNo * lehengaPrice;
-    double totalEvPrice = evDressNo * evPrice;
-    double totalNighSuitPrice = nightSuiteNo * nightSuitPrice;
-    double totalWaistCoastPrice = waistSuitNo * waistCoatPrice;
-    double totalShortPrice = shortNo * shortPrice;
-    double totalSkirtPrice = skirtNo * skirtPrice;
-    double totalScPrice = sCNo * sCPrice;
-    double totalinWearPrice = inWearNo * inWearPrice;
-    double totalSocksPrice = socksNo * socksPrice;
-    double totalfrockPrice = frockNo * frockPrice;
-    double totalJumpSuitPrice = jumpSuitNo * jumpSuitePrice;
-
-    double totalKurtaDesignerPrice = kurtaDesignerNo * kurtaDesignerPrice;
-    double totalBedSheetPrice = bedSheetNo * bedSheetPrice;
-    double totalBathMatePrice = batheMateNo * bathMatePrice;
 
     return Scaffold(
       body: Container(
@@ -236,7 +238,7 @@ class _PendingDetailsPageState extends State<PendingDetailsPage> {
                                       ),
                                       Text(
                                         "B-702, Sarthak the Sarjak, Bhaijipura Chokdi, PDPU \n"
-                                            "Crossroad , Beside Pulse Mall, Seventhn Floor , Kudasan",
+                                            "Crossroad , Beside Pulse Mall",
                                         style: TextStyle(fontSize: 10),
                                       )
                                     ],
@@ -2060,7 +2062,8 @@ class _PendingDetailsPageState extends State<PendingDetailsPage> {
 
                           Container(
                             width: double.infinity,
-                            height: mQuery.size.height*0.35,
+                            // height: mQuery.size.height*0.35, // if tghe  Tax and Delivery Charges will include then this height  else 
+                            height : mQuery.size.height*0.2,
                             color: Color(0xfff8fcfe),
                             margin: EdgeInsets.symmetric(
                                 horizontal: mQuery.size.width*0.033
@@ -2133,74 +2136,74 @@ class _PendingDetailsPageState extends State<PendingDetailsPage> {
                                         ),
                                         SizedBox(height: mQuery.size.height * 0.01,),
 
-                                        DottedLine(
-                                          direction: Axis.horizontal,
-                                          alignment: WrapAlignment.center,
-                                          lineLength: double.infinity,
-                                          lineThickness: 1.0,
-                                          dashLength: 4.0,
-                                          dashColor: Colors.black54,
-                                          dashRadius: 0.0,
-                                          dashGapLength: 4.0,
-                                          dashGapRadius: 0.0,
-                                        ),
+                                        // DottedLine(
+                                        //   direction: Axis.horizontal,
+                                        //   alignment: WrapAlignment.center,
+                                        //   lineLength: double.infinity,
+                                        //   lineThickness: 1.0,
+                                        //   dashLength: 4.0,
+                                        //   dashColor: Colors.black54,
+                                        //   dashRadius: 0.0,
+                                        //   dashGapLength: 4.0,
+                                        //   dashGapRadius: 0.0,
+                                        // ),
+                                        // SizedBox(height: mQuery.size.height * 0.01,),
+                                        // Row(
+                                        //   children: [
+                                        //     Text(
+                                        //       "Delivery Charges",
+                                        //       style: TextStyle(
+                                        //         fontSize: mQuery.size.height*0.018,
+                                        //         color: Colors.black54,
+                                        //         fontFamily: 'SatoshiRegular',
+                                        //       ),
+                                        //     ),
+                                        //     Expanded(child: SizedBox()),
+                                        //     Text(
+                                        //       "₹ 50",
+                                        //       style: TextStyle(
+                                        //         fontSize: mQuery.size.height*0.018,
+                                        //         color: Colors.black54,
+                                        //         fontFamily: 'SatoshiRegular',
+                                        //       ),
+                                        //     )
+                                        //   ],
+                                        // ),
                                         SizedBox(height: mQuery.size.height * 0.01,),
-                                        Row(
-                                          children: [
-                                            Text(
-                                              "Delivery Charges",
-                                              style: TextStyle(
-                                                fontSize: mQuery.size.height*0.018,
-                                                color: Colors.black54,
-                                                fontFamily: 'SatoshiRegular',
-                                              ),
-                                            ),
-                                            Expanded(child: SizedBox()),
-                                            Text(
-                                              "₹ 50",
-                                              style: TextStyle(
-                                                fontSize: mQuery.size.height*0.018,
-                                                color: Colors.black54,
-                                                fontFamily: 'SatoshiRegular',
-                                              ),
-                                            )
-                                          ],
-                                        ),
-                                        SizedBox(height: mQuery.size.height * 0.01,),
-                                        DottedLine(
-                                          direction: Axis.horizontal,
-                                          alignment: WrapAlignment.center,
-                                          lineLength: double.infinity,
-                                          lineThickness: 1.0,
-                                          dashLength: 4.0,
-                                          dashColor: Colors.black54,
-                                          dashRadius: 0.0,
-                                          dashGapLength: 4.0,
-                                          dashGapRadius: 0.0,
-                                        ),
-
-                                        SizedBox(height: mQuery.size.height * 0.01,),
-                                        Row(
-                                          children: [
-                                            Text("Tax",
-                                              style: TextStyle(
-                                                fontSize: mQuery.size.height*0.018,
-                                                color: Colors.black54,
-                                                fontFamily: 'SatoshiRegular',
-                                              ),
-                                            ),
-                                            Expanded(child: SizedBox(),),
-                                            Text(
-                                              "₹ 60",
-                                              style: TextStyle(
-                                                fontSize: mQuery.size.height*0.018,
-                                                color: Colors.black54,
-                                                fontFamily: 'SatoshiRegular',
-                                              ),
-                                            )
-                                          ],
-                                        ),
-                                        Divider(),
+                                        // DottedLine(
+                                        //   direction: Axis.horizontal,
+                                        //   alignment: WrapAlignment.center,
+                                        //   lineLength: double.infinity,
+                                        //   lineThickness: 1.0,
+                                        //   dashLength: 4.0,
+                                        //   dashColor: Colors.black54,
+                                        //   dashRadius: 0.0,
+                                        //   dashGapLength: 4.0,
+                                        //   dashGapRadius: 0.0,
+                                        // ),
+                                        //
+                                        // SizedBox(height: mQuery.size.height * 0.01,),
+                                        // Row(
+                                        //   children: [
+                                        //     Text("Tax",
+                                        //       style: TextStyle(
+                                        //         fontSize: mQuery.size.height*0.018,
+                                        //         color: Colors.black54,
+                                        //         fontFamily: 'SatoshiRegular',
+                                        //       ),
+                                        //     ),
+                                        //     Expanded(child: SizedBox(),),
+                                        //     Text(
+                                        //       "₹ 60",
+                                        //       style: TextStyle(
+                                        //         fontSize: mQuery.size.height*0.018,
+                                        //         color: Colors.black54,
+                                        //         fontFamily: 'SatoshiRegular',
+                                        //       ),
+                                        //     )
+                                        //   ],
+                                        // ),
+                                        // Divider(),
                                         Row(
                                           children: [
                                             Text("Grand Total",
@@ -2224,32 +2227,32 @@ class _PendingDetailsPageState extends State<PendingDetailsPage> {
                                   ),
                                   SizedBox(height: mQuery.size.height*0.03,),
 
-                                  Container(
-                                    width: double.infinity,
-                                    height: mQuery.size.height*0.06,
-                                    margin: EdgeInsets.symmetric(
-                                        horizontal: mQuery.size.width*0.03
-                                    ),
-                                    padding: EdgeInsets.symmetric(
-                                        horizontal: mQuery.size.width*0.033
-                                    ),
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(6),
-                                        color: Color(0xffff474b)
-                                    ),
-                                    child: Row(
-                                      children: [
-                                        Text("Cash to be collected",style: TextStyle(
-                                            color: Colors.white
-                                        ),
-                                        ),
-                                        Expanded(child: SizedBox()),
-                                        Text("₹ 20.00",style: TextStyle(
-                                            color: Colors.white
-                                        ),)
-                                      ],
-                                    ),
-                                  ),
+                                  // Container(
+                                  //   width: double.infinity,
+                                  //   height: mQuery.size.height*0.06,
+                                  //   margin: EdgeInsets.symmetric(
+                                  //       horizontal: mQuery.size.width*0.03
+                                  //   ),
+                                  //   padding: EdgeInsets.symmetric(
+                                  //       horizontal: mQuery.size.width*0.033
+                                  //   ),
+                                  //   decoration: BoxDecoration(
+                                  //       borderRadius: BorderRadius.circular(6),
+                                  //       color: Color(0xffff474b)
+                                  //   ),
+                                  //   child: Row(
+                                  //     children: [
+                                  //       Text("Cash to be collected",style: TextStyle(
+                                  //           color: Colors.white
+                                  //       ),
+                                  //       ),
+                                  //       Expanded(child: SizedBox()),
+                                  //       Text("₹ 20.00",style: TextStyle(
+                                  //           color: Colors.white
+                                  //       ),)
+                                  //     ],
+                                  //   ),
+                                  // ),
                                 ],
                               ),
                             ),
@@ -2420,7 +2423,7 @@ class _PendingDetailsPageState extends State<PendingDetailsPage> {
                                       Expanded(child: SizedBox()),
                                       Row(
                                         children: [
-                                          Text("Confirm Payment",style: TextStyle(
+                                          Text("Confirm Order",style: TextStyle(
                                               color: Colors.white,
                                               fontSize: mQuery.size.height*0.021
                                           ),),
@@ -2537,7 +2540,7 @@ class _PendingDetailsPageState extends State<PendingDetailsPage> {
                     child: Text(
                       "Pickup Order Summary",
                       style: TextStyle(
-                          fontSize: mQuery.size.height * 0.024,
+                          fontSize: mQuery.size.height * 0.019,
                           fontFamily: 'SatoshiBold'),
                     ),
                   ),
@@ -2553,11 +2556,10 @@ class _PendingDetailsPageState extends State<PendingDetailsPage> {
                     child: Row(
                       children: [
                         ProfilePicture(
-                          radius: mQuery.size.width * 0.07,
+                          radius: mQuery.size.width * 0.05,
                           fontsize: 10,
                           name: "",
-                          img:
-                          "https://images.news18.com/ibnkhabar/uploads/2023/09/IFS-Apala-mishra-age-upsc-rank-education-biography-in-hindi-marksheet-salary-1.jpg",
+                          img: "https://images.news18.com/ibnkhabar/uploads/2023/09/IFS-Apala-mishra-age-upsc-rank-education-biography-in-hindi-marksheet-salary-1.jpg",
                         ),
                         SizedBox(
                           width: mQuery.size.width * 0.025,
@@ -3444,7 +3446,8 @@ class _PendingDetailsPageState extends State<PendingDetailsPage> {
 
                   Container(
                     width: double.infinity,
-                    height: mQuery.size.height*0.35,
+                    // height: mQuery.size.height*0.35,
+                    height: mQuery.size.height*0.2,
                     color: Color(0xfff8fcfe),
                     margin: EdgeInsets.symmetric(
                         horizontal: mQuery.size.width*0.033
@@ -3602,32 +3605,32 @@ class _PendingDetailsPageState extends State<PendingDetailsPage> {
                           ),
                           SizedBox(height: mQuery.size.height*0.03,),
 
-                          Container(
-                            width: double.infinity,
-                            height: mQuery.size.height*0.06,
-                            margin: EdgeInsets.symmetric(
-                                horizontal: mQuery.size.width*0.03
-                            ),
-                            padding: EdgeInsets.symmetric(
-                                horizontal: mQuery.size.width*0.033
-                            ),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(6),
-                                color: Color(0xff009c1a)
-                            ),
-                            child: Row(
-                              children: [
-                                Text("Cash collected",style: TextStyle(
-                                    color: Colors.white
-                                ),
-                                ),
-                                Expanded(child: SizedBox()),
-                                Text("₹ 20.00",style: TextStyle(
-                                    color: Colors.white
-                                ),)
-                              ],
-                            ),
-                          ),
+                          // Container(
+                          //   width: double.infinity,
+                          //   height: mQuery.size.height*0.06,
+                          //   margin: EdgeInsets.symmetric(
+                          //       horizontal: mQuery.size.width*0.03
+                          //   ),
+                          //   padding: EdgeInsets.symmetric(
+                          //       horizontal: mQuery.size.width*0.033
+                          //   ),
+                          //   decoration: BoxDecoration(
+                          //       borderRadius: BorderRadius.circular(6),
+                          //       color: Color(0xff009c1a)
+                          //   ),
+                          //   child: Row(
+                          //     children: [
+                          //       Text("Cash collected",style: TextStyle(
+                          //           color: Colors.white
+                          //       ),
+                          //       ),
+                          //       Expanded(child: SizedBox()),
+                          //       Text("₹ 20.00",style: TextStyle(
+                          //           color: Colors.white
+                          //       ),)
+                          //     ],
+                          //   ),
+                          // ),
                         ],
                       ),
                     ),
@@ -3798,7 +3801,7 @@ class _PendingDetailsPageState extends State<PendingDetailsPage> {
                             children: [
                               Text("Confirm Pickup",style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: mQuery.size.height*0.021
+                                  fontSize: mQuery.size.height*0.018
                               ),),
                               SizedBox(width: mQuery.size.width*0.01,),
                               Icon(Icons.arrow_right,color: Colors.white,)
@@ -3843,6 +3846,7 @@ class _PendingDetailsPageState extends State<PendingDetailsPage> {
               "You have successfully picked up the order.",
               style: TextStyle(
                 fontFamily: 'SatoshiMedium',
+                fontSize: mQuery.size.height*0.013
               ),
             ),
           ),
@@ -3861,7 +3865,7 @@ class _PendingDetailsPageState extends State<PendingDetailsPage> {
                   },
                   child: Container(
                     width: double.infinity,
-                    height: mQuery.size.height * 0.056,
+                    height: mQuery.size.height * 0.045,
                     decoration: BoxDecoration(
                       color: Color(0xff29b2fe),
                       borderRadius: BorderRadius.circular(6),
@@ -3871,8 +3875,7 @@ class _PendingDetailsPageState extends State<PendingDetailsPage> {
                         "Take Pictures",
                         style: TextStyle(
                           color: Colors.white,
-                          fontFamily: 'SatoshiBold',
-                          fontSize: mQuery.size.height * 0.024,
+                          fontSize: mQuery.size.height * 0.016,
                         ),
                       ),
                     ),
@@ -3888,7 +3891,7 @@ class _PendingDetailsPageState extends State<PendingDetailsPage> {
                   },
                   child: Container(
                     width: double.infinity,
-                    height: mQuery.size.height * 0.06,
+                    height: mQuery.size.height * 0.045,
                     decoration: BoxDecoration(
                       color: Color(0xff29b2fe),
                       borderRadius: BorderRadius.circular(8),
@@ -3899,7 +3902,7 @@ class _PendingDetailsPageState extends State<PendingDetailsPage> {
                         style: TextStyle(
                           color: Colors.white,
                           fontFamily: 'SatoshiBold',
-                          fontSize: mQuery.size.height * 0.024,
+                          fontSize: mQuery.size.height * 0.016,
                         ),
                       ),
                     ),

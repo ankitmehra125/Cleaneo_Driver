@@ -170,12 +170,12 @@ class _HomePageState extends State<HomePage> {
                               status ? 'Online' : 'Offline',
                               style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 17
+                                fontSize: 15
                               ),
                             ),
                             SizedBox(width: mQuery.size.width*0.012,),
                             Transform.scale(
-                              scale: 0.9,
+                              scale: 0.7,
                               child: Switch(
                                 value: status,
                                 activeTrackColor: Colors.white,
@@ -234,99 +234,64 @@ class _HomePageState extends State<HomePage> {
             Expanded(
               child: ListView(
                 children: [
-                  GridView.builder(
-                    shrinkWrap: true,
-                    physics: const NeverScrollableScrollPhysics(),
-                    gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      crossAxisSpacing: 1,
-                      mainAxisSpacing: 20,
-                    ),
-                    itemBuilder: (BuildContext context, int index) {
+                  Row(
+                    children: List.generate(gridItems1.length, (index) {
                       var item = gridItems1[index];
-                      return Stack(
-                        children: [
-                          GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => _pages1[index],
-                                ),
-                              );
-                            },
-                            child: Container(
-                              width: mQuery.size.width * 0.45,
-                              height: mQuery.size.height * 0.35,
-                              margin:
-                                  const EdgeInsets.symmetric(horizontal: 12),
-                              padding: EdgeInsets.only(
-                                  top: mQuery.size.height * 0.046),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(16),
-                                color: Colors.white,
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.grey.withOpacity(0.5),
-                                    spreadRadius: 2,
-                                    blurRadius: 10,
-                                    offset: const Offset(0, 0),
-                                  ),
-                                ],
+                      return Expanded(
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => _pages1[index],
                               ),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  SizedBox(
-                                    width: 85,
-                                    height: 85,
-                                    child: Image.asset(
-                                      item["image"],
-                                    ),
-                                  ),
-                                  SizedBox(height: mQuery.size.height * 0.01),
-                                  Text(
-                                    item["text"],
-                                    style: TextStyle(
-                                        fontSize: mQuery.size.height * 0.02,
-                                        fontFamily: 'PoppinsSemiBold'),
-                                  ),
-                                ],
-                              ),
+                            );
+                          },
+                          child: Container(
+                            width: mQuery.size.width*0.4,
+                            height: mQuery.size.height*0.14,
+                            margin: EdgeInsets.symmetric(
+                              horizontal: 20
                             ),
-                          ),
-                          Positioned(
-                            top: mQuery.size.height * 0.01,
-                            right: mQuery.size.width * 0.05,
-                            child: Container(
-                              width: 22,
-                              height: 22,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: item["text"] == "Pickup"
-                                    ? Colors.green
-                                    : Colors.red,
-                              ),
-                              child: Center(
-                                child: Text(
-                                  item["text"] == "Pickup"
-                                      ? "3"
-                                      : "2", // Can be dynamic using map
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(12),
+                              color: Colors.white,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.5),
+                                  spreadRadius: 2,
+                                  blurRadius: 10,
+                                  offset: const Offset(0, 0),
+                                ),
+                              ],
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                SizedBox(
+                                  width: mQuery.size.width * 0.15,
+                                  height: mQuery.size.height * 0.07,
+                                  child: Image.asset(
+                                    item["image"],
+                                  ),
+                                ),
+                                SizedBox(height: mQuery.size.height * 0.006),
+                                Text(
+                                  item["text"],
                                   style: TextStyle(
-                                      fontSize: mQuery.size.height * 0.013,
-                                      fontFamily: 'PoppinsBold',
-                                      color: Colors.white),
+                                    fontSize: mQuery.size.height * 0.014,
+                                    fontFamily: 'PoppinsSemiBold',
+                                  ),
                                 ),
-                              ),
+                              ],
                             ),
                           ),
-                        ],
+                        ),
                       );
-                    },
-                    itemCount: gridItems1.length,
+                    }),
                   ),
-                  SizedBox(height: mQuery.size.height * 0.028),
+
+                  SizedBox(height: mQuery.size.height * 0.04),
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -336,10 +301,10 @@ class _HomePageState extends State<HomePage> {
                       );
                     },
                     child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 24),
                       child: Container(
                         width: double.infinity,
-                        height: mQuery.size.height * 0.065,
+                        height: mQuery.size.height * 0.06,
                         decoration: BoxDecoration(
                             color: const Color(0xff29b2fe),
                             borderRadius: BorderRadius.circular(20)),
@@ -350,8 +315,8 @@ class _HomePageState extends State<HomePage> {
                             children: [
                               SvgPicture.asset(
                                 "assets/route.svg",
-                                width: mQuery.size.width * 0.035,
-                                height: mQuery.size.height * 0.035,
+                                width: mQuery.size.width * 0.03,
+                                height: mQuery.size.height * 0.026,
                               ),
                               const SizedBox(
                                 width: 10.0,
@@ -359,7 +324,7 @@ class _HomePageState extends State<HomePage> {
                               Text(
                                 "Start Trip",
                                 style: TextStyle(
-                                    fontSize: mQuery.size.height * 0.022,
+                                    fontSize: mQuery.size.height * 0.018,
                                     color: Colors.white,
                                     fontFamily: 'PoppinsSemiBold'),
                               ),
@@ -369,93 +334,156 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                   ),
-                  SizedBox(height: mQuery.size.height * 0.028),
+                  SizedBox(height: mQuery.size.height * 0.04),
 
                   //second
-                  GridView.builder(
-                    shrinkWrap: true,
-                    physics: const NeverScrollableScrollPhysics(),
-                    gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      crossAxisSpacing: 1,
-                      mainAxisSpacing: 20,
-                    ),
-                    itemBuilder: (BuildContext context, int index) {
-                      var item = gridItems2[index];
-                      return GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => _pages2[index],
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => _pages2[0],
+                              ),
+                            );
+                          },
+                          child: Container(
+                            width: mQuery.size.width*0.4,
+                            height: mQuery.size.height*0.14,
+                            margin: EdgeInsets.symmetric(
+                              horizontal: 20
                             ),
-                          );
-                        },
-                        child: Container(
-                          width: mQuery.size.width * 0.45,
-                          height: mQuery.size.height * 0.35,
-                          margin: const EdgeInsets.symmetric(horizontal: 12),
-                          padding:
-                              EdgeInsets.only(top: mQuery.size.height * 0.046),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(16),
-                            color: Colors.white,
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.grey.withOpacity(0.5),
-                                spreadRadius: 2,
-                                blurRadius: 10,
-                                offset: const Offset(0, 0),
-                              ),
-                            ],
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              SizedBox(
-                                width: 75,
-                                height: 75,
-                                child: Image.asset(
-                                  item["image"],
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(12),
+                              color: Colors.white,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.5),
+                                  spreadRadius: 2,
+                                  blurRadius: 10,
+                                  offset: const Offset(0, 0),
                                 ),
-                              ),
-                              SizedBox(height: mQuery.size.height * 0.02),
-                              Text(
-                                item["text"],
-                                style: TextStyle(
-                                  fontSize: mQuery.size.height * 0.02,
-                                  fontFamily: 'PoppinsSemiBold',
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 5.0,
-                              ),
-                              Container(
-                                width: mQuery.size.width * 0.13,
-                                height: mQuery.size.height * 0.022,
-                                decoration: const BoxDecoration(
-                                  color: Colors.blue,
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(50.0)),
-                                ),
-                                child: Center(
-                                  child: Text(
-                                    item["earnings"],
-                                    style: TextStyle(
-                                        fontSize: mQuery.size.height * 0.012,
-                                        fontFamily: 'PoppinsSemiBold',
-                                        color: Colors.white),
+                              ],
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                SizedBox(
+                                  width: mQuery.size.width * 0.15,
+                                  height: mQuery.size.height * 0.05,
+                                  child: Image.asset(
+                                    gridItems2[0]["image"],
                                   ),
                                 ),
-                              ),
-                            ],
+                                SizedBox(height: mQuery.size.height * 0.006),
+                                Text(
+                                  gridItems2[0]["text"],
+                                  style: TextStyle(
+                                    fontSize: mQuery.size.height * 0.014,
+                                    fontFamily: 'PoppinsSemiBold',
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 5.0,
+                                ),
+                                Container(
+                                  width: mQuery.size.width * 0.13,
+                                  height: mQuery.size.height * 0.022,
+                                  decoration: const BoxDecoration(
+                                    color: Colors.blue,
+                                    borderRadius: BorderRadius.all(Radius.circular(50.0)),
+                                  ),
+                                  child: Center(
+                                    child: Text(
+                                      gridItems2[0]["earnings"],
+                                      style: TextStyle(
+                                        fontSize: mQuery.size.height * 0.012,
+                                        fontFamily: 'PoppinsSemiBold',
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
-                      );
-                    },
-                    itemCount: gridItems2.length,
+                      ),
+                      Expanded(
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => _pages2[1],
+                              ),
+                            );
+                          },
+                          child: Container(
+                            height: mQuery.size.height*0.14,
+                            margin: EdgeInsets.symmetric(
+                              horizontal: 20
+                            ),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(12),
+                              color: Colors.white,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.5),
+                                  spreadRadius: 2,
+                                  blurRadius: 10,
+                                  offset: const Offset(0, 0),
+                                ),
+                              ],
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                SizedBox(
+                                  width: mQuery.size.width * 0.15,
+                                  height: mQuery.size.height * 0.05,
+                                  child: Image.asset(
+                                    gridItems2[1]["image"],
+                                  ),
+                                ),
+                                SizedBox(height: mQuery.size.height * 0.006),
+                                Text(
+                                  gridItems2[1]["text"],
+                                  style: TextStyle(
+                                    fontSize: mQuery.size.height * 0.014,
+                                    fontFamily: 'PoppinsSemiBold',
+                                  ),
+                                ),
+
+                                Container(
+                                  width: mQuery.size.width * 0.13,
+                                  height: mQuery.size.height * 0.022,
+                                  decoration: const BoxDecoration(
+                                    color: Colors.blue,
+                                    borderRadius: BorderRadius.all(Radius.circular(50.0)),
+                                  ),
+                                  child: Center(
+                                    child: Text(
+                                      gridItems2[1]["earnings"],
+                                      style: TextStyle(
+                                        fontSize: mQuery.size.height * 0.012,
+                                        fontFamily: 'PoppinsSemiBold',
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
+
                   SizedBox(height: mQuery.size.height * 0.03),
                 ],
               ),
