@@ -493,7 +493,7 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                           }));
                         },
                         child: Container(
-                            height: mQuery.size.height * 0.26,
+                            height: mQuery.size.height * 0.3,
                             margin: const EdgeInsets.only(bottom: 21.0),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(6),
@@ -503,9 +503,7 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                                   color: Colors.grey.withOpacity(0.3),
                                   spreadRadius: 2,
                                   blurRadius: 7,
-                                  offset: const Offset(
-                                    0,
-                                    0,
+                                  offset: const Offset(0, 0,
                                   ), // changes the position of the shadow
                                 ),
                               ],
@@ -520,26 +518,21 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                                     padding: const EdgeInsets.symmetric(
                                         horizontal: 16.0),
                                     child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
                                         Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.start,
+                                          mainAxisAlignment: MainAxisAlignment.start,
                                           children: [
                                             const Icon(
                                               Icons.shopping_bag_outlined,
                                               color: const Color(0xFF48BDFE),
                                             ),
-                                            const SizedBox(
-                                              width: 6.0,
-                                            ),
+                                            const SizedBox(width: 6.0,),
                                             Text(
                                               'Order ${order['orderNumber']}',
                                               style: TextStyle(
                                                   color: Colors.black,
-                                                  fontSize:
-                                                      mQuery.size.height * 0.015,
+                                                  fontSize: mQuery.size.height * 0.015,
                                                   fontFamily: 'PoppinsSemiBold'),
                                             ),
                                           ],
@@ -552,26 +545,20 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                                   height: mQuery.size.height * 0.02,
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 16.0),
+                                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
                                   child: Column(
                                     children: [
                                       Row(
                                         children: [
-                                          Text(
-                                            'Location',
+                                          Text('Location',
                                             style: TextStyle(
-                                                color: const Color.fromARGB(
-                                                    255, 152, 152, 152),
-                                                fontSize:
-                                                    mQuery.size.height * 0.012,
+                                                color: const Color.fromARGB(255, 152, 152, 152),
+                                                fontSize: mQuery.size.height * 0.012,
                                                 fontFamily: 'PoppinsSemiBold'),
                                           ),
                                         ],
                                       ),
-                                      const SizedBox(
-                                        height: 5.0,
-                                      ),
+                                      const SizedBox(height: 5.0,),
                                       Row(
                                         children: [
                                           const Icon(
@@ -579,9 +566,7 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                                             color: Colors.blue,
                                             size: 16,
                                           ),
-                                          const SizedBox(
-                                            width: 6.0,
-                                          ),
+                                          const SizedBox(width: 6.0,),
                                           Text(
                                             '${order['location']}',
                                             style: TextStyle(
@@ -657,7 +642,7 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                                     ],
                                   ),
                                 ),
-                                Expanded(child: Container()),
+                                SizedBox(height: 10,),
                                 GestureDetector(
                                   onTap:()
                                   {

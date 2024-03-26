@@ -386,6 +386,12 @@ class _PendingDetailsPageState extends State<PendingDetailsPage> {
                                                                 ),
                                                               ),
                                                             ),
+                                                            Container(
+                                                                width : 10,
+                                                                 child : TextField(
+                                                                   
+                                                             )
+                                                            ),
                                                             GestureDetector(
                                                               onTap: () => _itemValue.value++,
                                                               child: Container(
@@ -2062,7 +2068,7 @@ class _PendingDetailsPageState extends State<PendingDetailsPage> {
 
                           Container(
                             width: double.infinity,
-                            // height: mQuery.size.height*0.35, // if tghe  Tax and Delivery Charges will include then this height  else 
+                            // height: mQuery.size.height*0.35, // if tghe  Tax and Delivery Charges will include then this height  else
                             height : mQuery.size.height*0.2,
                             color: Color(0xfff8fcfe),
                             margin: EdgeInsets.symmetric(
@@ -3898,7 +3904,7 @@ class _PendingDetailsPageState extends State<PendingDetailsPage> {
                     ),
                     child: Center(
                       child: Text(
-                        "Start Next Trip",
+                        "Start Trip",
                         style: TextStyle(
                           color: Colors.white,
                           fontFamily: 'SatoshiBold',

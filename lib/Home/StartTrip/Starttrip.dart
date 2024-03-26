@@ -763,18 +763,12 @@ class _StartTripPageState extends State<StartTripPage> {
                                         /// update shirt
                                         Row(
                                           children: [
-                                            ValueListenableBuilder<int>(
-                                              valueListenable: _itemValue,
-                                              builder: (context, value, child) {
-                                                double totalPrice1 = value * lehengaPrice;
-                                                return Text(
-                                                  "$value Shirt",
-                                                  style: TextStyle(
-                                                    fontSize: mQuery.size.height * 0.017,
-                                                    fontFamily: 'SatoshiBold',
-                                                  ),
-                                                );
-                                              },
+                                            Text(
+                                              "Shirt",
+                                              style: TextStyle(
+                                                fontSize: mQuery.size.height * 0.017,
+                                                fontFamily: 'SatoshiBold',
+                                              ),
                                             ),
 
                                             Expanded(child: SizedBox()),
@@ -818,6 +812,19 @@ class _StartTripPageState extends State<StartTripPage> {
                                                                   color: Color(0xff29b2fe)),
                                                             ),
                                                           ),
+                                                        ),
+                                                        ValueListenableBuilder<int>(
+                                                          valueListenable: _itemValue,
+                                                          builder: (context, value, child) {
+                                                            double totalPrice1 = value * lehengaPrice;
+                                                            return Text(
+                                                              "$value",
+                                                              style: TextStyle(
+                                                                fontSize: mQuery.size.height * 0.017,
+                                                                fontFamily: 'SatoshiBold',
+                                                              ),
+                                                            );
+                                                          },
                                                         ),
                                                         GestureDetector(
                                                           onTap: () => _itemValue.value++,
@@ -883,18 +890,12 @@ class _StartTripPageState extends State<StartTripPage> {
                                         // update Blouse designer
                                         Row(
                                           children: [
-                                            ValueListenableBuilder<int>(
-                                              valueListenable: _itemValue5,
-                                              builder: (context, value5, child) {
-                                                double totalPrice1 = value5 * lehengaPrice;
-                                                return Text(
-                                                  "$value5 Blouse Designer)",
-                                                  style: TextStyle(
-                                                    fontSize: mQuery.size.height * 0.017,
-                                                    fontFamily: 'SatoshiBold',
-                                                  ),
-                                                );
-                                              },
+                                            Text(
+                                              "Blouse Designer",
+                                              style: TextStyle(
+                                                fontSize: mQuery.size.height * 0.017,
+                                                fontFamily: 'SatoshiBold',
+                                              ),
                                             ),
 
                                             Expanded(child: SizedBox()),
@@ -938,7 +939,19 @@ class _StartTripPageState extends State<StartTripPage> {
                                                              ),
                                                            ),
                                                          ),
-
+                                                         ValueListenableBuilder<int>(
+                                                           valueListenable: _itemValue5,
+                                                           builder: (context, value5, child) {
+                                                             double totalPrice1 = value5 * lehengaPrice;
+                                                             return Text(
+                                                               "$value5",
+                                                               style: TextStyle(
+                                                                 fontSize: mQuery.size.height * 0.017,
+                                                                 fontFamily: 'SatoshiBold',
+                                                               ),
+                                                             );
+                                                           },
+                                                         ),
                                                          GestureDetector(
                                                            onTap: () => _itemValue5.value++,
                                                            child: Container(
@@ -1003,18 +1016,12 @@ class _StartTripPageState extends State<StartTripPage> {
                                         ///  update lehenga
                                         Row(
                                           children: [
-                                            ValueListenableBuilder<int>(
-                                              valueListenable: _itemValue1,
-                                              builder: (context, value1, child) {
-                                                double totalPrice1 = value1 * lehengaPrice;
-                                                return Text(
-                                                  "$value1 Lehenga Suit(Heavy)",
-                                                  style: TextStyle(
-                                                    fontSize: mQuery.size.height * 0.017,
-                                                    fontFamily: 'SatoshiBold',
-                                                  ),
-                                                );
-                                              },
+                                            Text(
+                                              "Lehenga Suit(Heavy)",
+                                              style: TextStyle(
+                                                fontSize: mQuery.size.height * 0.017,
+                                                fontFamily: 'SatoshiBold',
+                                              ),
                                             ),
                                             Expanded(child: SizedBox()),
                                             GestureDetector(
@@ -1055,7 +1062,19 @@ class _StartTripPageState extends State<StartTripPage> {
                                                             ),
                                                           ),
                                                         ),
-
+                                                        ValueListenableBuilder<int>(
+                                                          valueListenable: _itemValue1,
+                                                          builder: (context, value1, child) {
+                                                            double totalPrice1 = value1 * lehengaPrice;
+                                                            return Text(
+                                                              "$value1",
+                                                              style: TextStyle(
+                                                                fontSize: mQuery.size.height * 0.017,
+                                                                fontFamily: 'SatoshiBold',
+                                                              ),
+                                                            );
+                                                          },
+                                                        ),
                                                         GestureDetector(
                                                           onTap: () => _itemValue1.value++,
                                                           child: Container(
@@ -1119,18 +1138,12 @@ class _StartTripPageState extends State<StartTripPage> {
                                         // update ev
                                         Row(
                                           children: [
-                                            ValueListenableBuilder<int>(
-                                              valueListenable: _itemValue2,
-                                              builder: (context, value2, child) {
-                                                double totalPrice1 = value2 * lehengaPrice;
-                                                return Text(
-                                                  "$value2 Evening Dress(Heavy Work)",
-                                                  style: TextStyle(
-                                                    fontSize: mQuery.size.height * 0.017,
-                                                    fontFamily: 'SatoshiBold',
-                                                  ),
-                                                );
-                                              },
+                                            Text(
+                                              "Evening Dress(Heavy Work)",
+                                              style: TextStyle(
+                                                fontSize: mQuery.size.height * 0.017,
+                                                fontFamily: 'SatoshiBold',
+                                              ),
                                             ),
                                             const Expanded(child: SizedBox()),
                                             GestureDetector(
@@ -1172,6 +1185,19 @@ class _StartTripPageState extends State<StartTripPage> {
                                                                    color: Color(0xff29b2fe)),
                                                              ),
                                                            )
+                                                         ),
+                                                         ValueListenableBuilder<int>(
+                                                           valueListenable: _itemValue2,
+                                                           builder: (context, value2, child) {
+                                                             double totalPrice1 = value2 * lehengaPrice;
+                                                             return Text(
+                                                               "$value2",
+                                                               style: TextStyle(
+                                                                 fontSize: mQuery.size.height * 0.017,
+                                                                 fontFamily: 'SatoshiBold',
+                                                               ),
+                                                             );
+                                                           },
                                                          ),
                                                          GestureDetector(
                                                            onTap: () => _itemValue2.value++,
@@ -1234,18 +1260,12 @@ class _StartTripPageState extends State<StartTripPage> {
                                         // update night suit
                                         Row(
                                           children: [
-                                            ValueListenableBuilder<int>(
-                                              valueListenable: _itemValue3,
-                                              builder: (context, value3, child) {
-                                                double totalPrice1 = value3 * nightSuitPrice;
-                                                return Text(
-                                                  "$value3 Night Suit",
-                                                  style: TextStyle(
-                                                    fontSize: mQuery.size.height * 0.017,
-                                                    fontFamily: 'SatoshiBold',
-                                                  ),
-                                                );
-                                              },
+                                            Text(
+                                              "Night Suit",
+                                              style: TextStyle(
+                                                fontSize: mQuery.size.height * 0.017,
+                                                fontFamily: 'SatoshiBold',
+                                              ),
                                             ),
 
                                             Expanded(child: SizedBox()),
@@ -1287,7 +1307,19 @@ class _StartTripPageState extends State<StartTripPage> {
                                                             ),
                                                           ),
                                                         ),
-
+                                                        ValueListenableBuilder<int>(
+                                                          valueListenable: _itemValue3,
+                                                          builder: (context, value3, child) {
+                                                            double totalPrice1 = value3 * nightSuitPrice;
+                                                            return Text(
+                                                              "$value3",
+                                                              style: TextStyle(
+                                                                fontSize: mQuery.size.height * 0.017,
+                                                                fontFamily: 'SatoshiBold',
+                                                              ),
+                                                            );
+                                                          },
+                                                        ),
                                                         GestureDetector(
                                                           onTap: () => _itemValue3.value++,
                                                           child: Container(
@@ -1350,18 +1382,12 @@ class _StartTripPageState extends State<StartTripPage> {
                                         // update waistcoat
                                         Row(
                                           children: [
-                                            ValueListenableBuilder<int>(
-                                              valueListenable: _itemValue4,
-                                              builder: (context, value4, child) {
-                                                double totalPrice1 = value4 * waistCoatPrice;
-                                                return Text(
-                                                  "$value4 Waistcoat ",
-                                                  style: TextStyle(
-                                                    fontSize: mQuery.size.height * 0.017,
-                                                    fontFamily: 'SatoshiBold',
-                                                  ),
-                                                );
-                                              },
+                                            Text(
+                                              "Waistcoat",
+                                              style: TextStyle(
+                                                fontSize: mQuery.size.height * 0.017,
+                                                fontFamily: 'SatoshiBold',
+                                              ),
                                             ),
 
                                             Expanded(child: SizedBox()),
@@ -1403,6 +1429,19 @@ class _StartTripPageState extends State<StartTripPage> {
                                                                  color: Color(0xff29b2fe)),
                                                            )
                                                        )
+                                                       ),
+                                                       ValueListenableBuilder<int>(
+                                                         valueListenable: _itemValue4,
+                                                         builder: (context, value4, child) {
+                                                           double totalPrice1 = value4 * waistCoatPrice;
+                                                           return Text(
+                                                             "$value4",
+                                                             style: TextStyle(
+                                                               fontSize: mQuery.size.height * 0.017,
+                                                               fontFamily: 'SatoshiBold',
+                                                             ),
+                                                           );
+                                                         },
                                                        ),
                                                        GestureDetector(
                                                          onTap: () => _itemValue4.value++,
@@ -1467,18 +1506,12 @@ class _StartTripPageState extends State<StartTripPage> {
                                         // update short
                                         Row(
                                           children: [
-                                            ValueListenableBuilder<int>(
-                                              valueListenable: _itemValue6,
-                                              builder: (context, value6, child) {
-                                                double totalPrice1 = value6 * lehengaPrice;
-                                                return Text(
-                                                  "$value6 Short",
-                                                  style: TextStyle(
-                                                    fontSize: mQuery.size.height * 0.017,
-                                                    fontFamily: 'SatoshiBold',
-                                                  ),
-                                                );
-                                              },
+                                            Text(
+                                              "Short",
+                                              style: TextStyle(
+                                                fontSize: mQuery.size.height * 0.017,
+                                                fontFamily: 'SatoshiBold',
+                                              ),
                                             ),
                                             Expanded(child: SizedBox()),
                                             GestureDetector(
@@ -1521,6 +1554,19 @@ class _StartTripPageState extends State<StartTripPage> {
                                                                   color: Color(0xff29b2fe)),
                                                             ),
                                                           ),
+                                                        ),
+                                                        ValueListenableBuilder<int>(
+                                                          valueListenable: _itemValue6,
+                                                          builder: (context, value6, child) {
+                                                            double totalPrice1 = value6 * lehengaPrice;
+                                                            return Text(
+                                                              "$value6",
+                                                              style: TextStyle(
+                                                                fontSize: mQuery.size.height * 0.017,
+                                                                fontFamily: 'SatoshiBold',
+                                                              ),
+                                                            );
+                                                          },
                                                         ),
                                                         GestureDetector(
                                                           onTap: () => _itemValue6.value++,
@@ -1584,18 +1630,12 @@ class _StartTripPageState extends State<StartTripPage> {
                                         // update skirt
                                         Row(
                                           children: [
-                                            ValueListenableBuilder<int>(
-                                              valueListenable: _itemValue7,
-                                              builder: (context, value7, child) {
-                                                double totalPrice1 = value7 * lehengaPrice;
-                                                return Text(
-                                                  "$value7 Skirt",
-                                                  style: TextStyle(
-                                                    fontSize: mQuery.size.height * 0.017,
-                                                    fontFamily: 'SatoshiBold',
-                                                  ),
-                                                );
-                                              },
+                                            Text(
+                                              "Skirt",
+                                              style: TextStyle(
+                                                fontSize: mQuery.size.height * 0.017,
+                                                fontFamily: 'SatoshiBold',
+                                              ),
                                             ),
                                             Expanded(child: SizedBox()),
                                             GestureDetector(
@@ -1638,6 +1678,19 @@ class _StartTripPageState extends State<StartTripPage> {
                                                                   color: Color(0xff29b2fe)),
                                                             ),
                                                           ),
+                                                        ),
+                                                        ValueListenableBuilder<int>(
+                                                          valueListenable: _itemValue7,
+                                                          builder: (context, value7, child) {
+                                                            double totalPrice1 = value7 * lehengaPrice;
+                                                            return Text(
+                                                              "$value7",
+                                                              style: TextStyle(
+                                                                fontSize: mQuery.size.height * 0.017,
+                                                                fontFamily: 'SatoshiBold',
+                                                              ),
+                                                            );
+                                                          },
                                                         ),
                                                         GestureDetector(
                                                           onTap: () => _itemValue7.value++,
@@ -1702,18 +1755,12 @@ class _StartTripPageState extends State<StartTripPage> {
                                         // update Swimming Costume
                                         Row(
                                           children: [
-                                            ValueListenableBuilder<int>(
-                                              valueListenable: _itemValue8,
-                                              builder: (context, value8, child) {
-                                                double totalPrice1 = value8 * lehengaPrice;
-                                                return Text(
-                                                  "$value8 Swimming Costume",
-                                                  style: TextStyle(
-                                                    fontSize: mQuery.size.height * 0.017,
-                                                    fontFamily: 'SatoshiBold',
-                                                  ),
-                                                );
-                                              },
+                                            Text(
+                                              "Swimming Costume",
+                                              style: TextStyle(
+                                                fontSize: mQuery.size.height * 0.017,
+                                                fontFamily: 'SatoshiBold',
+                                              ),
                                             ),
                                             Expanded(child: SizedBox()),
                                             GestureDetector(
@@ -1756,6 +1803,19 @@ class _StartTripPageState extends State<StartTripPage> {
                                                                   color: Color(0xff29b2fe)),
                                                             ),
                                                           ),
+                                                        ),
+                                                        ValueListenableBuilder<int>(
+                                                          valueListenable: _itemValue8,
+                                                          builder: (context, value8, child) {
+                                                            double totalPrice1 = value8 * lehengaPrice;
+                                                            return Text(
+                                                              "$value8",
+                                                              style: TextStyle(
+                                                                fontSize: mQuery.size.height * 0.017,
+                                                                fontFamily: 'SatoshiBold',
+                                                              ),
+                                                            );
+                                                          },
                                                         ),
                                                         GestureDetector(
                                                           onTap: () => _itemValue8.value++,
@@ -1823,19 +1883,13 @@ class _StartTripPageState extends State<StartTripPage> {
                                         //  update Inner Wear
                                         Row(
                                           children: [
-                                          ValueListenableBuilder<int>(
-                                          valueListenable: _itemValue9,
-                                          builder: (context, value9, child) {
-                                            double totalPrice1 = value9 * inWearPrice;
-                                            return Text(
-                                              "$value9 Inner wear",
+                                            Text(
+                                              "Inner wear",
                                               style: TextStyle(
                                                 fontSize: mQuery.size.height * 0.017,
                                                 fontFamily: 'SatoshiBold',
                                               ),
-                                            );
-                                          },
-                                        ),
+                                            ),
 
                                             Expanded(child: SizedBox()),
                                             GestureDetector(
@@ -1878,6 +1932,19 @@ class _StartTripPageState extends State<StartTripPage> {
                                                                   color: Color(0xff29b2fe)),
                                                             ),
                                                           ),
+                                                        ),
+                                                        ValueListenableBuilder<int>(
+                                                          valueListenable: _itemValue9,
+                                                          builder: (context, value9, child) {
+                                                            double totalPrice1 = value9 * inWearPrice;
+                                                            return Text(
+                                                              "$value9",
+                                                              style: TextStyle(
+                                                                fontSize: mQuery.size.height * 0.017,
+                                                                fontFamily: 'SatoshiBold',
+                                                              ),
+                                                            );
+                                                          },
                                                         ),
                                                         GestureDetector(
                                                           onTap: () => _itemValue9.value++,
@@ -1945,18 +2012,12 @@ class _StartTripPageState extends State<StartTripPage> {
                                         // update socks
                                         Row(
                                           children: [
-                                            ValueListenableBuilder<int>(
-                                              valueListenable: _itemValue10,
-                                              builder: (context, value10, child) {
-                                                double totalPrice1 = value10 * lehengaPrice;
-                                                return Text(
-                                                  "$value10 Socks/Stocking",
-                                                  style: TextStyle(
-                                                    fontSize: mQuery.size.height * 0.017,
-                                                    fontFamily: 'SatoshiBold',
-                                                  ),
-                                                );
-                                              },
+                                            Text(
+                                              "Socks/Stocking",
+                                              style: TextStyle(
+                                                fontSize: mQuery.size.height * 0.017,
+                                                fontFamily: 'SatoshiBold',
+                                              ),
                                             ),
                                             Expanded(child: SizedBox()),
                                             GestureDetector(
@@ -1999,6 +2060,19 @@ class _StartTripPageState extends State<StartTripPage> {
                                                                   color: Color(0xff29b2fe)),
                                                             ),
                                                           ),
+                                                        ),
+                                                        ValueListenableBuilder<int>(
+                                                          valueListenable: _itemValue10,
+                                                          builder: (context, value10, child) {
+                                                            double totalPrice1 = value10 * lehengaPrice;
+                                                            return Text(
+                                                              "$value10",
+                                                              style: TextStyle(
+                                                                fontSize: mQuery.size.height * 0.017,
+                                                                fontFamily: 'SatoshiBold',
+                                                              ),
+                                                            );
+                                                          },
                                                         ),
                                                         GestureDetector(
                                                           onTap: () => _itemValue10.value++,
@@ -2065,18 +2139,12 @@ class _StartTripPageState extends State<StartTripPage> {
                                         // update Frock
                                         Row(
                                           children: [
-                                            ValueListenableBuilder<int>(
-                                              valueListenable: _itemValue11,
-                                              builder: (context, value11, child) {
-                                                double totalPrice1 = value11 * frockPrice;
-                                                return Text(
-                                                  "$value11 Frock",
-                                                  style: TextStyle(
-                                                    fontSize: mQuery.size.height * 0.017,
-                                                    fontFamily: 'SatoshiBold',
-                                                  ),
-                                                );
-                                              },
+                                            Text(
+                                              "Frock",
+                                              style: TextStyle(
+                                                fontSize: mQuery.size.height * 0.017,
+                                                fontFamily: 'SatoshiBold',
+                                              ),
                                             ),
                                             Expanded(child: SizedBox()),
                                             GestureDetector(
@@ -2119,6 +2187,19 @@ class _StartTripPageState extends State<StartTripPage> {
                                                                   color: Color(0xff29b2fe)),
                                                             ),
                                                           ),
+                                                        ),
+                                                        ValueListenableBuilder<int>(
+                                                          valueListenable: _itemValue11,
+                                                          builder: (context, value11, child) {
+                                                            double totalPrice1 = value11 * frockPrice;
+                                                            return Text(
+                                                              "$value11",
+                                                              style: TextStyle(
+                                                                fontSize: mQuery.size.height * 0.017,
+                                                                fontFamily: 'SatoshiBold',
+                                                              ),
+                                                            );
+                                                          },
                                                         ),
                                                         GestureDetector(
                                                           onTap: () => _itemValue11.value++,
@@ -2186,18 +2267,12 @@ class _StartTripPageState extends State<StartTripPage> {
                                         // update jup suit
                                         Row(
                                           children: [
-                                            ValueListenableBuilder<int>(
-                                              valueListenable: _itemValue12,
-                                              builder: (context, value12, child) {
-                                                double totalPrice1 = value12 * jumpSuitePrice;
-                                                return Text(
-                                                  "$value12 Jump Suits",
-                                                  style: TextStyle(
-                                                    fontSize: mQuery.size.height * 0.017,
-                                                    fontFamily: 'SatoshiBold',
-                                                  ),
-                                                );
-                                              },
+                                            Text(
+                                              "Jump Suits",
+                                              style: TextStyle(
+                                                fontSize: mQuery.size.height * 0.017,
+                                                fontFamily: 'SatoshiBold',
+                                              ),
                                             ),
                                             Expanded(child: SizedBox()),
                                             GestureDetector(
@@ -2240,6 +2315,19 @@ class _StartTripPageState extends State<StartTripPage> {
                                                                   color: Color(0xff29b2fe)),
                                                             ),
                                                           ),
+                                                        ),
+                                                        ValueListenableBuilder<int>(
+                                                          valueListenable: _itemValue12,
+                                                          builder: (context, value12, child) {
+                                                            double totalPrice1 = value12 * jumpSuitePrice;
+                                                            return Text(
+                                                              "$value12",
+                                                              style: TextStyle(
+                                                                fontSize: mQuery.size.height * 0.017,
+                                                                fontFamily: 'SatoshiBold',
+                                                              ),
+                                                            );
+                                                          },
                                                         ),
                                                         GestureDetector(
                                                           onTap: () => _itemValue12.value++,
@@ -2377,9 +2465,7 @@ class _StartTripPageState extends State<StartTripPage> {
                                           ),
                                         ),
                                         SizedBox(height: mQuery.size.height * 0.018),
-
-
-
+                                        
                                         Row(
                                           children: [
                                             Text(
