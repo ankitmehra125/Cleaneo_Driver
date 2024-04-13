@@ -59,7 +59,7 @@ class _VehDetailsState extends State<VehDetails> {
                       style: TextStyle(
                         fontSize: 20,
                         color: Colors.white,
-                        fontFamily: 'PoppinsSemiBold',
+                        fontFamily: 'SatoshiBold',
                       ),
                     )
                   ],
@@ -84,7 +84,7 @@ class _VehDetailsState extends State<VehDetails> {
                       Text(
                         "Basic Information*",
                         style: TextStyle(
-                          fontFamily: 'PoppinsSemiBold',
+                          fontFamily: 'SatoshiBold',
                           fontSize: mQuery.size.height * 0.015,
                         ),
                       ),
@@ -115,7 +115,7 @@ class _VehDetailsState extends State<VehDetails> {
                       Text(
                         "Registration Details",
                         style: TextStyle(
-                          fontFamily: 'PoppinsSemiBold',
+                          fontFamily: 'SatoshiBold',
                           fontSize: mQuery.size.height * 0.015,
                         ),
                       ),
@@ -197,7 +197,7 @@ class _VehDetailsState extends State<VehDetails> {
                               style: TextStyle(
                                   fontSize: mQuery.size.height * 0.02,
                                   color: Colors.white,
-                                  fontFamily: 'PoppinsSemiBold'),
+                                  fontFamily: 'SatoshiBold'),
                             ),
                           ),
                         ),

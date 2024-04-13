@@ -148,7 +148,7 @@ class _HomePageState extends State<HomePage> {
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: mQuery.size.height * 0.035,
-                                  fontFamily: 'PoppinsSemiBold'),
+                                  fontFamily: 'SatoshiBold'),
                             ),
                           ],
                         ),
@@ -166,7 +166,7 @@ class _HomePageState extends State<HomePage> {
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: mQuery.size.height * 0.025,
-                              fontFamily: 'PoppinsBold'),
+                              fontFamily: 'SatoshiBold'),
                         ),
                         Row(
                           children: [
@@ -216,7 +216,7 @@ class _HomePageState extends State<HomePage> {
                         hintStyle: TextStyle(
                             fontSize: mQuery.size.height * 0.018,
                             color: const Color.fromARGB(255, 179, 179, 179),
-                            fontFamily: 'PoppinsMedium'),
+                            fontFamily: 'SatoshiMedium'),
                         suffixIcon: const Icon(Icons.search,
                             color: Color.fromARGB(255, 179, 179, 179)),
                       ),
@@ -285,7 +285,7 @@ class _HomePageState extends State<HomePage> {
                                     item["text"],
                                     style: TextStyle(
                                         fontSize: mQuery.size.height * 0.02,
-                                        fontFamily: 'PoppinsSemiBold'),
+                                        fontFamily: 'SatoshiBold'),
                                   ),
                                 ],
                               ),
@@ -310,7 +310,7 @@ class _HomePageState extends State<HomePage> {
                                       : "2", // Can be dynamic using map
                                   style: TextStyle(
                                       fontSize: mQuery.size.height * 0.013,
-                                      fontFamily: 'PoppinsBold',
+                                      fontFamily: 'SatoshiBold',
                                       color: Colors.white),
                                 ),
                               ),
@@ -356,7 +356,7 @@ class _HomePageState extends State<HomePage> {
                                 style: TextStyle(
                                     fontSize: mQuery.size.height * 0.022,
                                     color: Colors.white,
-                                    fontFamily: 'PoppinsSemiBold'),
+                                    fontFamily: 'SatoshiBold'),
                               ),
                             ],
                           ),
@@ -420,7 +420,7 @@ class _HomePageState extends State<HomePage> {
                                 item["text"],
                                 style: TextStyle(
                                   fontSize: mQuery.size.height * 0.02,
-                                  fontFamily: 'PoppinsSemiBold',
+                                  fontFamily: 'SatoshiBold',
                                 ),
                               ),
                               const SizedBox(
@@ -439,7 +439,7 @@ class _HomePageState extends State<HomePage> {
                                     item["earnings"],
                                     style: TextStyle(
                                         fontSize: mQuery.size.height * 0.012,
-                                        fontFamily: 'PoppinsSemiBold',
+                                        fontFamily: 'SatoshiBold',
                                         color: Colors.white),
                                   ),
                                 ),

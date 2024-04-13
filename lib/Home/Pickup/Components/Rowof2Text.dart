@@ -101,7 +101,7 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                         _tabNames[index],
                         style: TextStyle(
                           fontSize: 18,
-                          fontWeight: FontWeight.bold,
+                          fontFamily: 'SatoshiBold',
                           color: _selectedIndex == index
                               ? const Color(0xFF29B2FE)
                               : Colors.grey,
@@ -138,11 +138,10 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                        color: Colors.white,
                        boxShadow: [
                          BoxShadow(
-                           color: Colors.grey.withOpacity(0.3),
-                           spreadRadius: 2,
+                           color: Colors.grey.withOpacity(0.5),
+                           spreadRadius: 0,
                            blurRadius: 7,
-                           offset: const Offset(0, 0,
-                           ), // changes the position of the shadow
+                           offset: const Offset(0, 0,), // changes the position of the shadow
                          ),
                        ],
                      ),
@@ -165,10 +164,12 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                                    crossAxisAlignment: CrossAxisAlignment.start,
                                    children: [
                                      Text("Order #1234567890",style: TextStyle(
-                                       fontSize: 14
+                                       fontSize: 13,
+                                       fontFamily: 'SatoshiMedium'
                                      ),),
                                      Text("COD (₹200)",style: TextStyle(
                                        fontSize: 11,
+                                       fontFamily: 'SatoshiRegular',
                                        color: Colors.black54
                                      ),)
                                    ],
@@ -186,7 +187,8 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                              children: [
                                Text("Location",style: TextStyle(
                                  color: Colors.black54,
-                                 fontSize: 12
+                                 fontSize: 12,
+                                 fontFamily: 'SatoshiMedium'
                                ),),
                                Row(
                                  children: [
@@ -207,20 +209,23 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                                          ),
                                        ),
                                        Text("1.2km",style: TextStyle(
-                                         fontSize: 12
+                                         fontSize: 12,
+                                         fontFamily: 'SatoshiRegular'
                                        ),)
                                      ],
                                    ),
                                    SizedBox(width: mQuery.size.width*0.036,),
                                    Text("B-702, Sarthak the Sarjak",style: TextStyle(
-                                     fontSize: 12
+                                     fontSize: 12,
+                                     fontFamily: 'SatoshiMedium'
                                    ),)
                                  ],
                                ),
                                Divider(),
                                Text("Customer Detail",style: TextStyle(
                                  color: Colors.black54,
-                                 fontSize: 12
+                                 fontSize: 12,
+                                 fontFamily: 'SatoshiMedium'
                                ),),
                                SizedBox(height: mQuery.size.height*0.007,),
                                Row(
@@ -234,10 +239,12 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                                      crossAxisAlignment: CrossAxisAlignment.start,
                                      children: [
                                        Text("Shweta",style: TextStyle(
-                                         fontSize: 12
+                                         fontSize: 12,
+                                         fontFamily: 'SatoshiMedium'
                                        ),),
                                        Text("9766484574584",style: TextStyle(
-                                           fontSize: 12
+                                           fontSize: 12,
+                                           fontFamily: 'SatoshiRegular'
                                        ))
                                      ],
                                    ),
@@ -280,7 +287,8 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                              child: Center(
                                child: Text("START TRIP",style: TextStyle(
                                  color: Colors.white,
-                                 fontSize: 12
+                                 fontSize: 12,
+                                 fontFamily: 'SatoshiBold'
                                ),),
                              ),
                            ),
@@ -306,7 +314,7 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                         boxShadow: [
                           BoxShadow(
                             color: Colors.grey.withOpacity(0.3),
-                            spreadRadius: 2,
+                            spreadRadius: 0,
                             blurRadius: 7,
                             offset: const Offset(0, 0,
                             ), // changes the position of the shadow
@@ -332,11 +340,13 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
                                       Text("Order #1234567890",style: TextStyle(
-                                        fontSize: 14
+                                        fontSize: 14,
+                                        fontFamily: 'SatoshiMedium'
                                       ),),
-                                      Text("Onlin (₹350)",style: TextStyle(
+                                      Text("Online (₹350)",style: TextStyle(
                                           fontSize: 11,
-                                          color: Colors.black54
+                                          color: Colors.black54,
+                                        fontFamily: 'SatoshiRegular'
                                       ),)
                                     ],
                                   )
@@ -353,7 +363,8 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                               children: [
                                 Text("Location",style: TextStyle(
                                     color: Colors.black54,
-                                    fontSize: 12
+                                    fontSize: 12,
+                                  fontFamily: 'SatoshiMedium'
                                 ),),
                                 Row(
                                   children: [
@@ -374,20 +385,23 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                                           ),
                                         ),
                                         Text("1.2km",style: TextStyle(
-                                            fontSize: 12
+                                            fontSize: 12,
+                                          fontFamily: 'SatoshiRegular'
                                         ),)
                                       ],
                                     ),
                                     SizedBox(width: mQuery.size.width*0.036,),
                                     Text("B-702, Sarthak the Sarjak",style: TextStyle(
-                                        fontSize: 12
+                                        fontSize: 12,
+                                      fontFamily: 'SatoshiMedium'
                                     ),)
                                   ],
                                 ),
                                 Divider(),
                                 Text("Customer Detail",style: TextStyle(
                                     color: Colors.black54,
-                                    fontSize: 12
+                                    fontSize: 12,
+                                  fontFamily: 'SatoshiRegular'
                                 ),),
                                 SizedBox(height: mQuery.size.height*0.007,),
                                 Row(
@@ -401,10 +415,12 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
                                         Text("Shweta",style: TextStyle(
-                                            fontSize: 12
+                                            fontSize: 12,
+                                          fontFamily: 'SatoshiMedium'
                                         ),),
                                         Text("9766484574584",style: TextStyle(
-                                            fontSize: 12
+                                            fontSize: 12,
+                                          fontFamily: 'SatoshiRegular'
                                         ))
                                       ],
                                     ),
@@ -447,6 +463,7 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                               child: Center(
                                 child: Text("START TRIP",style: TextStyle(
                                     color: Colors.white,
+                                    fontFamily: 'SatoshiBold',
                                     fontSize: 12
                                 ),),
                               ),
@@ -477,8 +494,8 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                             '${order['dateandtime']}',
                             style: TextStyle(
                                 color: const Color.fromARGB(255, 181, 181, 181),
-                                fontSize: mQuery.size.height * 0.012,
-                                fontFamily: 'PoppinsSemiBold'),
+                                fontSize: mQuery.size.height * 0.016,
+                                fontFamily: 'SatoshiBold'),
                           ),
                         ],
                       ),
@@ -501,7 +518,7 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.grey.withOpacity(0.3),
-                                  spreadRadius: 2,
+                                  spreadRadius: 0,
                                   blurRadius: 7,
                                   offset: const Offset(0, 0,
                                   ), // changes the position of the shadow
@@ -532,8 +549,8 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                                               'Order ${order['orderNumber']}',
                                               style: TextStyle(
                                                   color: Colors.black,
-                                                  fontSize: mQuery.size.height * 0.015,
-                                                  fontFamily: 'PoppinsSemiBold'),
+                                                  fontSize: mQuery.size.height * 0.017,
+                                                  fontFamily: 'SatoshiBold'),
                                             ),
                                           ],
                                         ),
@@ -553,8 +570,8 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                                           Text('Location',
                                             style: TextStyle(
                                                 color: const Color.fromARGB(255, 152, 152, 152),
-                                                fontSize: mQuery.size.height * 0.012,
-                                                fontFamily: 'PoppinsSemiBold'),
+                                                fontSize: mQuery.size.height * 0.018,
+                                                fontFamily: 'SatoshiBold'),
                                           ),
                                         ],
                                       ),
@@ -572,8 +589,8 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                                             style: TextStyle(
                                                 color: Colors.black87,
                                                 fontSize:
-                                                    mQuery.size.height * 0.012,
-                                                fontFamily: 'PoppinsMedium'),
+                                                    mQuery.size.height * 0.014,
+                                                fontFamily: 'SatoshiMedium'),
                                           ),
                                         ],
                                       ),
@@ -595,8 +612,8 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                                                 color: const Color.fromARGB(
                                                     255, 152, 152, 152),
                                                 fontSize:
-                                                    mQuery.size.height * 0.012,
-                                                fontFamily: 'PoppinsSemiBold'),
+                                                    mQuery.size.height * 0.016,
+                                                fontFamily: 'SatoshiBold'),
                                           ),
                                         ],
                                       ),
@@ -624,16 +641,16 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                                                 style: TextStyle(
                                                     color: Colors.black87,
                                                     fontSize: mQuery.size.height *
-                                                        0.012,
-                                                    fontFamily: 'PoppinsMedium'),
+                                                        0.016,
+                                                    fontFamily: 'SatoshiMedium'),
                                               ),
                                               Text(
                                                 '${order['number']}',
                                                 style: TextStyle(
                                                     color: Colors.black87,
                                                     fontSize: mQuery.size.height *
-                                                        0.012,
-                                                    fontFamily: 'PoppinsMedium'),
+                                                        0.015,
+                                                    fontFamily: 'SatoshiMedium'),
                                               ),
                                             ],
                                           )
@@ -654,7 +671,7 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                                     decoration: const BoxDecoration(
                                       borderRadius: BorderRadius.only(
                                           bottomLeft: Radius.circular(6.0),
-                                          bottomRight: const Radius.circular(6.0)),
+                                          bottomRight: Radius.circular(6.0)),
                                       color: Color(0xFF29B2FE),
                                     ),
                                     height: mQuery.size.height * 0.035,
@@ -664,8 +681,8 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                                         'SUBMIT REVIEW',
                                         style: TextStyle(
                                             color: Colors.white,
-                                            fontSize: mQuery.size.height * 0.012,
-                                            fontFamily: 'PoppinsSemiBold'),
+                                            fontSize: mQuery.size.height * 0.015,
+                                            fontFamily: 'SatoshiBold'),
                                       ),
                                     ),
                                   ),

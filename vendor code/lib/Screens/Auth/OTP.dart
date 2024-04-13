@@ -92,7 +92,7 @@ class _OTPPageState extends State<OTPPage> {
                     style: TextStyle(
                       fontSize: mQuery.size.height * 0.025,
                       color: Colors.white,
-                      fontFamily: 'PoppinsSemiBold',
+                      fontFamily: 'SatoshiBold',
                     ),
                   )
                 ],
@@ -118,7 +118,7 @@ class _OTPPageState extends State<OTPPage> {
                           "Enter 4 Digit Code",
                           style: TextStyle(
                             fontSize: mQuery.size.height * 0.025,
-                            fontFamily: 'PoppinsSemiBold',
+                            fontFamily: 'SatoshiBold',
                           ),
                         ),
                         SizedBox(height: mQuery.size.height * 0.006),
@@ -126,7 +126,7 @@ class _OTPPageState extends State<OTPPage> {
                           "Sent to $phoneNo",
                           style: TextStyle(
                               fontSize: mQuery.size.height * 0.015,
-                              fontFamily: 'PoppinsSemiBold',
+                              fontFamily: 'SatoshiBold',
                               color: Colors.black87),
                         ),
                         SizedBox(height: mQuery.size.height * 0.04),
@@ -139,7 +139,7 @@ class _OTPPageState extends State<OTPPage> {
                           "Problems receiving the code?",
                           style: TextStyle(
                             fontSize: mQuery.size.height * 0.015,
-                            fontFamily: 'PoppinsSemiBold',
+                            fontFamily: 'SatoshiBold',
                           ),
                         ),
                         SizedBox(height: mQuery.size.height * 0.008),
@@ -155,7 +155,7 @@ class _OTPPageState extends State<OTPPage> {
                               style: TextStyle(
                                 color: Color(0xff29b2fe),
                                 fontSize: mQuery.size.height * 0.015,
-                                fontFamily: 'PoppinsBold',
+                                fontFamily: 'SatoshiBold',
                               ),
                             )
                           ],
@@ -180,7 +180,7 @@ class _OTPPageState extends State<OTPPage> {
                                 style: TextStyle(
                                   fontSize: mQuery.size.height * 0.02,
                                   color: Colors.white,
-                                  fontFamily: 'PoppinsSemiBold',
+                                  fontFamily: 'SatoshiBold',
                                 ),
                               ),
                             ),

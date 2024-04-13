@@ -50,7 +50,7 @@ class _LocationState extends State<Location> {
                     style: TextStyle(
                         fontSize: 20,
                         color: Colors.white,
-                        fontFamily: 'PoppinsSemiBold'),
+                        fontFamily: 'SatoshiBold'),
                   )
                 ],
               ),
@@ -89,7 +89,7 @@ class _LocationState extends State<Location> {
                                 "Allow Cleaneo to use your location for pickup and deleveries.",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                    fontFamily: 'PoppinsSemiBold',
+                                    fontFamily: 'SatoshiBold',
                                     fontSize: mQuery.size.height * 0.015),
                               ),
                             ),
@@ -123,7 +123,7 @@ class _LocationState extends State<Location> {
                                 style: TextStyle(
                                     fontSize: mQuery.size.height * 0.02,
                                     color: Colors.white,
-                                    fontFamily: 'PoppinsSemiBold'),
+                                    fontFamily: 'SatoshiBold'),
                               ),
                             ),
                           ),

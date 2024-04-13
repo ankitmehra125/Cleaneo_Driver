@@ -1,7 +1,5 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class PaymentProcessPage extends StatefulWidget {
   const PaymentProcessPage({Key? key}) : super(key: key);
@@ -40,7 +38,7 @@ class _PaymentProcessPageState extends State<PaymentProcessPage>
                   child: Container(
                     width: mQuery.size.width * 0.2,
                     height: mQuery.size.height * 0.08,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                       color: Color(0xffadd6ad),
                     ),
@@ -53,7 +51,7 @@ class _PaymentProcessPageState extends State<PaymentProcessPage>
             ),
           ),
           SizedBox(height: mQuery.size.height * 0.02),
-          Center(
+          const Center(
             child: Text(
               "Payment Receiving",
               style: TextStyle(
@@ -68,7 +66,7 @@ class _PaymentProcessPageState extends State<PaymentProcessPage>
             padding: EdgeInsets.symmetric(horizontal: mQuery.size.width * 0.3),
             child: LinearProgressIndicator(
               minHeight: mQuery.size.height * 0.008,
-              color: Color(0xff008000),
+              color: const Color(0xff008000),
               borderRadius: BorderRadius.circular(50),
             ),
           ),

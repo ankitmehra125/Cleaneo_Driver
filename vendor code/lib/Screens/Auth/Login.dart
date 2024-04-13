@@ -58,7 +58,7 @@ class _LoginPageState extends State<LoginPage> {
                     style: TextStyle(
                         fontSize: mQuery.size.height * 0.027,
                         color: Colors.white,
-                        fontFamily: 'PoppinsSemiBold'),
+                        fontFamily: 'SatoshiBold'),
                   ),
                 ],
               ),
@@ -85,7 +85,7 @@ class _LoginPageState extends State<LoginPage> {
                         Text(
                           "Phone Number",
                           style: TextStyle(
-                            fontFamily: 'PoppinsSemiBold',
+                            fontFamily: 'SatoshiBold',
                             fontSize: mQuery.size.height * 0.015,
                           ),
                         ),
@@ -152,7 +152,7 @@ class _LoginPageState extends State<LoginPage> {
                                       hintText: "Enter Phone Number*",
                                       hintStyle: TextStyle(
                                         fontSize: mQuery.size.height * 0.015,
-                                        fontFamily: 'PoppinsMedium',
+                                        fontFamily: 'SatoshiMedium',
                                         color:
                                             Color.fromARGB(255, 201, 201, 201),
                                       ),
@@ -190,7 +190,7 @@ class _LoginPageState extends State<LoginPage> {
                                 style: TextStyle(
                                     fontSize: mQuery.size.height * 0.022,
                                     color: Colors.white,
-                                    fontFamily: 'PoppinsSemiBold'),
+                                    fontFamily: 'SatoshiBold'),
                               ),
                             ),
                           ),
@@ -205,7 +205,7 @@ class _LoginPageState extends State<LoginPage> {
                               "Don't have an account?",
                               style: TextStyle(
                                   fontSize: mQuery.size.height * 0.015,
-                                  fontFamily: 'PoppinsMedium'),
+                                  fontFamily: 'SatoshiMedium'),
                             ),
                             SizedBox(
                               width: mQuery.size.width * 0.02,
@@ -221,7 +221,7 @@ class _LoginPageState extends State<LoginPage> {
                                 "Sign Up",
                                 style: TextStyle(
                                     fontSize: mQuery.size.height * 0.015,
-                                    fontFamily: 'PoppinsSemiBold',
+                                    fontFamily: 'SatoshiBold',
                                     color: const Color(0xff29b2fe)),
                               ),
                             )

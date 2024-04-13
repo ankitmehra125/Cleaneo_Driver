@@ -5,6 +5,7 @@ import 'package:cleaneo_driver_app/Home/MyEarnings/MyEarnings.dart';
 import 'package:cleaneo_driver_app/Home/Notifications/Notifications.dart';
 import 'package:cleaneo_driver_app/Home/Pickup/Pickup.dart';
 import 'package:cleaneo_driver_app/Home/myProfile_page.dart';
+import 'package:cleaneo_driver_app/Screens/WelcomePage.dart';
 import 'package:cleaneo_driver_app/Screens/help_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_profile_picture/flutter_profile_picture.dart';
@@ -23,6 +24,9 @@ class _MyDrawerState extends State<MyDrawer> {
   Widget build(BuildContext context) {
     var mQuery = MediaQuery.of(context);
     var versionNo = 1.1;
+    var user = "Shweta Somaiya";
+    var mobileNo = "(+91) 9978997899";
+
     return Drawer(
       child: Container(
         width: double.infinity,
@@ -69,7 +73,7 @@ class _MyDrawerState extends State<MyDrawer> {
                                         height: mQuery.size.height * 0.02,
                                       ),
                                       Text(
-                                        "Shweta Somaiya",
+                                        "$user",
                                         style: TextStyle(
                                             fontSize: mQuery.size.height * 0.02,
                                             fontWeight: FontWeight.w600),
@@ -106,8 +110,9 @@ class _MyDrawerState extends State<MyDrawer> {
                                         width: 5.0,
                                       ),
                                       Text(
-                                        "(+91) 9978997899",
+                                        "$mobileNo",
                                         style: TextStyle(
+                                          fontFamily: 'SatoshiRegular',
                                           fontSize: mQuery.size.height * 0.015,
                                         ),
                                       ),
@@ -150,15 +155,6 @@ class _MyDrawerState extends State<MyDrawer> {
                     topLeft: Radius.circular(16),
                     topRight: Radius.circular(16),
                   ),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.5),
-                      spreadRadius: 0.3,
-                      blurRadius: 10,
-                      offset: const Offset(
-                          3, 3), // changes the position of the shadow
-                    ),
-                  ],
                 ),
                 child: SingleChildScrollView(
                   child: Padding(
@@ -181,8 +177,8 @@ class _MyDrawerState extends State<MyDrawer> {
                               title: Text(
                                 "Dashboard",
                                 style: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: mQuery.size.height * 0.0212,
+                                  fontFamily: 'SatoshiBold',
+                                  fontSize: mQuery.size.height * 0.021,
                                 ),
                               ),
                             )),
@@ -201,8 +197,8 @@ class _MyDrawerState extends State<MyDrawer> {
                             title: Text(
                               "Pickups",
                               style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                fontSize: mQuery.size.height * 0.0212,
+                                fontFamily: 'SatoshiBold',
+                                fontSize: mQuery.size.height * 0.021,
                               ),
                             ),
                           ),
@@ -222,8 +218,8 @@ class _MyDrawerState extends State<MyDrawer> {
                             title: Text(
                               "Delivery",
                               style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                fontSize: mQuery.size.height * 0.0212,
+                                fontFamily: 'SatoshiBold',
+                                fontSize: mQuery.size.height * 0.021,
                               ),
                             ),
                           ),
@@ -243,8 +239,8 @@ class _MyDrawerState extends State<MyDrawer> {
                             title: Text(
                               "Notifications",
                               style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                fontSize: mQuery.size.height * 0.0212,
+                                fontFamily: 'SatoshiBold',
+                                fontSize: mQuery.size.height * 0.021,
                               ),
                             ),
                           ),
@@ -264,8 +260,8 @@ class _MyDrawerState extends State<MyDrawer> {
                             title: Text(
                               "My Earnings",
                               style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                fontSize: mQuery.size.height * 0.0212,
+                                fontFamily: 'SatoshiBold',
+                                fontSize: mQuery.size.height * 0.021,
                               ),
                             ),
                           ),
@@ -285,8 +281,8 @@ class _MyDrawerState extends State<MyDrawer> {
                             title: Text(
                               "Cash Collected",
                               style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                fontSize: mQuery.size.height * 0.0212,
+                                fontFamily: 'SatoshiBold',
+                                fontSize: mQuery.size.height * 0.021,
                               ),
                             ),
                           ),
@@ -306,8 +302,8 @@ class _MyDrawerState extends State<MyDrawer> {
                             title: Text(
                               "Ledger",
                               style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                fontSize: mQuery.size.height * 0.0212,
+                                fontFamily: 'SatoshiBold',
+                                fontSize: mQuery.size.height * 0.021,
                               ),
                             ),
                           ),
@@ -328,8 +324,8 @@ class _MyDrawerState extends State<MyDrawer> {
                             title: Text(
                               "Help",
                               style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                fontSize: mQuery.size.height * 0.0212,
+                                fontFamily: 'SatoshiBold',
+                                fontSize: mQuery.size.height * 0.021,
                               ),
                             ),
                           ),
@@ -360,7 +356,7 @@ class _MyDrawerState extends State<MyDrawer> {
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: mQuery.size.height * 0.02,
-                              fontWeight: FontWeight.bold),
+                              fontFamily: 'SatoshiBold'),
                         ),
                       ),
                     ),
@@ -382,13 +378,17 @@ class _MyDrawerState extends State<MyDrawer> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 GestureDetector(
-                                  onTap: () {},
+                                  onTap: () {
+                                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){
+                                      return WelcomePage();
+                                    }));
+                                  },
                                   child: Text(
                                     "Sign Out",
                                     style: TextStyle(
-                                        fontSize: mQuery.size.height * 0.022,
+                                        fontSize: mQuery.size.height * 0.021,
                                         color: Colors.black,
-                                        fontWeight: FontWeight.w600),
+                                        fontFamily: 'SatoshiBold'),
                                   ),
                                 ),
                               ],
@@ -402,6 +402,7 @@ class _MyDrawerState extends State<MyDrawer> {
                           "CLEANEO V$versionNo",
                           style: TextStyle(
                             fontSize: mQuery.size.height * 0.016,
+                            fontFamily: 'SatoshiMedium'
                           ),
                         ),
                         SizedBox(

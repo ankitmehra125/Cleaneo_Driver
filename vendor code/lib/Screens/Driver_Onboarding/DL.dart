@@ -49,7 +49,7 @@ class _DLState extends State<DL> {
                     style: TextStyle(
                       fontSize: 20,
                       color: Colors.white,
-                      fontFamily: 'PoppinsSemiBold',
+                      fontFamily: 'SatoshiBold',
                     ),
                   )
                 ],
@@ -84,7 +84,7 @@ class _DLState extends State<DL> {
                               child: const Text(
                                 "Take a picture of the front and back side of your document in a HORIZONTAL position.",
                                 style: TextStyle(
-                                    fontFamily: 'PoppinsSemiBold',
+                                    fontFamily: 'SatoshiBold',
                                     fontSize: 14),
                               ),
                             ),
@@ -119,7 +119,7 @@ class _DLState extends State<DL> {
                               hintText: "Enter Expiry Date",
                               hintStyle: TextStyle(
                                   fontSize: 13,
-                                  fontFamily: 'PoppinsSemiBold',
+                                  fontFamily: 'SatoshiBold',
                                   color: Color(0xffABAFB1)),
                             ),
                           ),
@@ -149,7 +149,7 @@ class _DLState extends State<DL> {
                                 style: TextStyle(
                                   fontSize: 15,
                                   color: Colors.white,
-                                  fontFamily: 'PoppinsSemiBold',
+                                  fontFamily: 'SatoshiBold',
                                 ),
                               ),
                             ),

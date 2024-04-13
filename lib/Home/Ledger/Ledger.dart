@@ -1,5 +1,6 @@
 
 import 'package:cleaneo_driver_app/Home/Ledger/Components/dropDownLedger.dart';
+import 'package:cleaneo_driver_app/Screens/Welcome/TS_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -23,6 +24,8 @@ class _LedgerState extends State<Ledger> {
     {"status": "On its way", "time": "11:30 AM", "date": "Yesterday"},
     {"status": "Delivered", "time": "11:30 AM", "date": "23rd Jun, 2023"},
   ];
+
+  bool isExpanded = false;
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +63,8 @@ class _LedgerState extends State<Ledger> {
                     style: TextStyle(
                         fontSize: 20,
                         color: Colors.white,
-                        fontWeight: FontWeight.w700),
+                      fontFamily: 'SatoshiBold'
+                        ),
                   )
                 ],
               ),
@@ -77,10 +81,9 @@ class _LedgerState extends State<Ledger> {
                   boxShadow: [
                     BoxShadow(
                       color: Colors.grey.withOpacity(0.5),
-                      spreadRadius: 0.3,
-                      blurRadius: 1,
-                      offset: const Offset(
-                          3, 3), // changes the position of the shadow
+                      spreadRadius: 0,
+                      blurRadius: 7,
+                      offset: const Offset(0,0), // changes the position of the shadow
                     ),
                   ],
                 ),
@@ -97,7 +100,7 @@ class _LedgerState extends State<Ledger> {
                           style: TextStyle(
                               fontSize: 16,
                               color: Colors.black,
-                              fontWeight: FontWeight.w500),
+                              fontFamily: 'SatoshiMedium'),
                         ),
                         DropdownLedger(),
                       ],
@@ -124,7 +127,7 @@ class _LedgerState extends State<Ledger> {
                           boxShadow: [
                             BoxShadow(
                               color: Colors.grey.withOpacity(0.3),
-                              spreadRadius: 2,
+                              spreadRadius: 0,
                               blurRadius: 7,
                               offset: const Offset(
                                   0, 0), // changes the position of the shadow
@@ -147,14 +150,15 @@ class _LedgerState extends State<Ledger> {
                                     style: TextStyle(
                                         fontSize: 14,
                                         color: Colors.black,
-                                        fontWeight: FontWeight.w600),
+                                        fontFamily: 'SatoshiBold'
+                                         ),
                                   ),
                                   Text(
                                     "₹ 1,600",
                                     style: TextStyle(
-                                        fontSize: 14,
+                                        fontFamily: 'SatoshiMedium',
                                         color: Colors.black,
-                                        fontWeight: FontWeight.w500),
+                                        ),
                                   ),
                                 ],
                               ),
@@ -177,14 +181,14 @@ class _LedgerState extends State<Ledger> {
                                     style: TextStyle(
                                         fontSize: 13,
                                         color: Colors.black54,
-                                        fontWeight: FontWeight.w500),
+                                        fontFamily: 'SatoshiMedium'),
                                   ),
                                   Text(
                                     "₹ 800",
                                     style: TextStyle(
                                         fontSize: 13,
                                         color: Colors.green,
-                                        fontWeight: FontWeight.w500),
+                                        fontFamily: 'SatoshiMedium'),
                                   ),
                                 ],
                               ),
@@ -208,14 +212,14 @@ class _LedgerState extends State<Ledger> {
                                     style: TextStyle(
                                         fontSize: 13,
                                         color: Colors.black54,
-                                        fontWeight: FontWeight.w500),
+                                        fontFamily: 'SatoshiMedium'),
                                   ),
                                   Text(
                                     "₹ 800",
                                     style: TextStyle(
                                         fontSize: 13,
                                         color: Color(0xFF48BDFE),
-                                        fontWeight: FontWeight.w500),
+                                        fontFamily: 'SatoshiMedium'),
                                   ),
                                 ],
                               ),
@@ -239,14 +243,14 @@ class _LedgerState extends State<Ledger> {
                                     style: TextStyle(
                                         fontSize: 14,
                                         color: Colors.black54,
-                                        fontWeight: FontWeight.w500),
+                                        fontFamily: 'SatoshiMedium'),
                                   ),
                                   Text(
                                     "₹ 320",
                                     style: TextStyle(
                                         fontSize: 13,
                                         color: Color(0xFF48BDFE),
-                                        fontWeight: FontWeight.w500),
+                                        fontFamily: 'SatoshiMedium'),
                                   ),
                                 ],
                               ),
@@ -270,14 +274,15 @@ class _LedgerState extends State<Ledger> {
                                     style: TextStyle(
                                         fontSize: 14,
                                         color: Colors.black54,
-                                        fontWeight: FontWeight.w500),
+                                        fontFamily: 'SatoshiMedium'
+                                        ),
                                   ),
                                   Text(
                                     "₹ 40",
                                     style: TextStyle(
                                         fontSize: 13,
                                         color: Color(0xFF48BDFE),
-                                        fontWeight: FontWeight.w500),
+                                        fontFamily: 'SatoshiMedium'),
                                   ),
                                 ],
                               ),
@@ -298,16 +303,15 @@ class _LedgerState extends State<Ledger> {
                                   Text(
                                     "Your Earnings",
                                     style: TextStyle(
-                                        fontSize: 14,
                                         color: Colors.black,
-                                        fontWeight: FontWeight.w600),
+                                        fontFamily: 'SatoshiBold'),
                                   ),
                                   Text(
                                     "₹ 1,240",
                                     style: TextStyle(
                                         fontSize: 13,
                                         color: Colors.green,
-                                        fontWeight: FontWeight.w600),
+                                        fontFamily: 'SatoshiBold'),
                                   ),
                                 ],
                               ),
@@ -317,6 +321,81 @@ class _LedgerState extends State<Ledger> {
                             ],
                           ),
                         )),
+                    SizedBox(height: mQuery.size.height*0.035,),
+                GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      isExpanded = !isExpanded;
+                    });
+                  },
+                  child: AnimatedContainer(
+                    duration: Duration(milliseconds: 300),
+                    width: double.infinity,
+                    height: isExpanded ? mQuery.size.height * 0.2 : mQuery.size.height * 0.08,
+                    padding: EdgeInsets.symmetric(horizontal: 16),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(6),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.3),
+                          spreadRadius: 0,
+                          blurRadius: 7,
+                          offset: Offset(0, 0),
+                        )
+                      ],
+                    ),
+                    child: Row(
+                      children: [
+                        SingleChildScrollView(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SizedBox(height: mQuery.size.height * 0.01),
+                              Row(
+                                children: [
+                                  Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "Today",
+                                        style: TextStyle(fontSize: 10,
+                                            color: Colors.green,
+                                            fontFamily: 'SatoshiBold'),
+                                      ),
+                                      Row(
+                                        children: [
+                                          Text(
+                                            "Cash : ",
+                                            style: TextStyle(fontFamily: 'SatoshiMedium'),
+                                          ),
+                                          Text(
+                                            "  ₹ 250",
+                                            style: TextStyle(fontFamily: 'SatoshiMedium'),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(width: mQuery.size.width*0.5,),
+                                  Icon(Icons.info_outline_rounded)
+                                ],
+                              ),
+                              SizedBox(height: mQuery.size.height * 0.01),
+
+                              if (isExpanded) ...[
+                                SizedBox(height: mQuery.size.height * 0.03),
+                                Text("Collected Cash to be given to Cleaneo",style: TextStyle(
+                                  fontFamily: 'SatoshiMedium'
+                                ),)
+                              ],
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),)
                   ],
                 ),
               ),

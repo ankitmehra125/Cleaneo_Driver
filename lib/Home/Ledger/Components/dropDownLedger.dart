@@ -1,3 +1,4 @@
+import 'package:cleaneo_driver_app/Screens/Welcome/TS_page.dart';
 import 'package:flutter/material.dart';
 
 class DropdownLedger extends StatefulWidget {
@@ -36,7 +37,9 @@ class _DropdownLedgerState extends State<DropdownLedger> {
             return DropdownMenuItem<String>(
               
               value: value,
-              child: Text(value),
+              child: Text(value,style: TextStyle(
+                fontFamily: "SatoshiMedium"
+              ),),
             );
           }).toList(),
         ),

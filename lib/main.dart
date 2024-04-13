@@ -1,8 +1,3 @@
-import 'package:cleaneo_driver_app/Home/Home_/Home.dart';
-import 'package:cleaneo_driver_app/Home/MyEarnings/MyEarnings.dart';
-import 'package:cleaneo_driver_app/Home/StartTrip/Starttrip.dart';
-import 'package:cleaneo_driver_app/Home/StartTrip/delivery_otp_page.dart';
-import 'package:cleaneo_driver_app/Home/StartTrip/payment_process_page.dart';
 import 'package:cleaneo_driver_app/Screens/Splash.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
@@ -14,6 +9,11 @@ void main() => runApp(
     builder: (context) => const MyApp(), // Wrap your app
   ),
 );
+
+// void main()
+// {
+//   runApp(const MyApp());
+// }
 
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -35,9 +35,7 @@ class _MyAppState extends State<MyApp> {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const SplashScreen(),
-      // home: DeliveryOTPPage(),
-      // home: PaymentProcessPage(),
+      home: const SplashScreen()
     );
   }
 }

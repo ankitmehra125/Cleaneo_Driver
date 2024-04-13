@@ -144,7 +144,7 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                             style: TextStyle(
                                 color: const Color.fromARGB(255, 181, 181, 181),
                                 fontSize: mQuery.size.height * 0.012,
-                                fontFamily: 'PoppinsSemiBold'),
+                                fontFamily: 'SatoshiBold'),
                           ),
                         ],
                       ),
@@ -199,7 +199,7 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                                                 color: Colors.black,
                                                 fontSize:
                                                     mQuery.size.height * 0.015,
-                                                fontFamily: 'PoppinsSemiBold'),
+                                                fontFamily: 'SatoshiBold'),
                                           ),
                                         ],
                                       ),
@@ -224,7 +224,7 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                                                   255, 152, 152, 152),
                                               fontSize:
                                                   mQuery.size.height * 0.012,
-                                              fontFamily: 'PoppinsSemiBold'),
+                                              fontFamily: 'SatoshiBold'),
                                         ),
                                       ],
                                     ),
@@ -247,7 +247,7 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                                               color: Colors.black87,
                                               fontSize:
                                                   mQuery.size.height * 0.012,
-                                              fontFamily: 'PoppinsMedium'),
+                                              fontFamily: 'SatoshiMedium'),
                                         ),
                                       ],
                                     ),
@@ -270,7 +270,7 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                                                   255, 152, 152, 152),
                                               fontSize:
                                                   mQuery.size.height * 0.012,
-                                              fontFamily: 'PoppinsSemiBold'),
+                                              fontFamily: 'SatoshiBold'),
                                         ),
                                       ],
                                     ),
@@ -299,7 +299,7 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                                                   color: Colors.black87,
                                                   fontSize: mQuery.size.height *
                                                       0.012,
-                                                  fontFamily: 'PoppinsMedium'),
+                                                  fontFamily: 'SatoshiMedium'),
                                             ),
                                             Text(
                                               '${order['number']}',
@@ -307,7 +307,7 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                                                   color: Colors.black87,
                                                   fontSize: mQuery.size.height *
                                                       0.012,
-                                                  fontFamily: 'PoppinsMedium'),
+                                                  fontFamily: 'SatoshiMedium'),
                                             ),
                                           ],
                                         )
@@ -339,7 +339,7 @@ class _PickupTwoTextState extends State<PickupTwoText> {
                                       style: TextStyle(
                                           color: Colors.white,
                                           fontSize: mQuery.size.height * 0.012,
-                                          fontFamily: 'PoppinsSemiBold'),
+                                          fontFamily: 'SatoshiBold'),
                                     ),
                                   ),
                                 ),

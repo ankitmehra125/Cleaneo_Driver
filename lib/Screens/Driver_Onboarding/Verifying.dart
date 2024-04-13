@@ -51,7 +51,7 @@ class _VerifyingState extends State<Verifying> {
                     style: TextStyle(
                       fontSize: 20,
                       color: Colors.white,
-                      fontFamily: 'PoppinsSemiBold',
+                      fontFamily: 'SatoshiBold',
                     ),
                   )
                 ],
@@ -65,15 +65,6 @@ class _VerifyingState extends State<Verifying> {
                   borderRadius: const BorderRadius.only(
                       topLeft: Radius.circular(16),
                       topRight: Radius.circular(16)),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.5),
-                      spreadRadius: 0.3,
-                      blurRadius: 1,
-                      offset: const Offset(
-                          3, 3), // changes the position of the shadow
-                    ),
-                  ],
                 ),
                 child: Padding(
                     padding: const EdgeInsets.only(left: 16, right: 16),
@@ -89,7 +80,7 @@ class _VerifyingState extends State<Verifying> {
                               child: Text(
                                 "We have received your profile details, our support team will get in touch & activate your account soon. You will receive a notification.",
                                 style: TextStyle(
-                                    fontFamily: 'PoppinsSemiBold',
+                                    fontFamily: 'SatoshiMedium',
                                     fontSize: mQuery.size.height * 0.015),
                               ),
                             ),
@@ -121,9 +112,10 @@ class _VerifyingState extends State<Verifying> {
                               child: const Text(
                                 "Okay",
                                 style: TextStyle(
-                                    fontSize: 15,
+                                    fontSize: 16,
                                     color: Colors.white,
-                                    fontWeight: FontWeight.w600),
+                                  fontFamily: 'SatoshiBold'
+                                ),
                               ),
                             ),
                           ),

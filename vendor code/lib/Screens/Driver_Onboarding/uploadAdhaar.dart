@@ -50,7 +50,7 @@ class _UploadAdhaarState extends State<UploadAdhaar> {
                     style: TextStyle(
                       fontSize: 20,
                       color: Colors.white,
-                      fontFamily: 'PoppinsSemiBold',
+                      fontFamily: 'SatoshiBold',
                     ),
                   )
                 ],
@@ -85,7 +85,7 @@ class _UploadAdhaarState extends State<UploadAdhaar> {
                               child: const Text(
                                 "Take a picture of the front and back side of your document in a HORIZONTAL position.",
                                 style: TextStyle(
-                                  fontFamily: 'PoppinsSemiBold',
+                                  fontFamily: 'SatoshiBold',
                                   fontSize: 15,
                                 ),
                               ),
@@ -121,7 +121,7 @@ class _UploadAdhaarState extends State<UploadAdhaar> {
                               hintText: "Enter Aadhaar Number",
                               hintStyle: TextStyle(
                                   fontSize: 13,
-                                  fontFamily: 'PoppinsSemiBold',
+                                  fontFamily: 'SatoshiBold',
                                   color: Color(0xffABAFB1)),
                             ),
                           ),
@@ -151,7 +151,7 @@ class _UploadAdhaarState extends State<UploadAdhaar> {
                                 style: TextStyle(
                                   fontSize: 15,
                                   color: Colors.white,
-                                  fontFamily: 'PoppinsSemiBold',
+                                  fontFamily: 'SatoshiBold',
                                 ),
                               ),
                             ),

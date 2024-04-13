@@ -51,7 +51,7 @@ class _VehDetailsFiledsState extends State<VehDetailsFileds> {
                 hintText: widget.hintText,
                 hintStyle: TextStyle(
                   fontSize: mQuery.size.height * 0.015,
-                  fontFamily: 'PoppinsMedium',
+                  fontFamily: 'SatoshiMedium',
                   color: const Color.fromARGB(255, 161, 161, 161),
                 ),
                 contentPadding: const EdgeInsets.symmetric(vertical: 12),

@@ -20,6 +20,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   var orderNo = 3;
   int selectedContainerIndex = -1;
+  var user = "Shweta";
 
   TextEditingController searchController = TextEditingController();
 
@@ -142,7 +143,7 @@ class _HomePageState extends State<HomePage> {
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: mQuery.size.height * 0.02,
-                                  fontFamily: 'PoppinsSemiBold'),
+                                  fontFamily: 'SatoshiBold'),
                             ),
                           ],
                         ),
@@ -156,11 +157,11 @@ class _HomePageState extends State<HomePage> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "Shweta",
+                          "$user",
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: mQuery.size.height * 0.018,
-                              fontFamily: 'PoppinsBold'),
+                              fontFamily: 'SatoshiMedium'),
                         ),
                         SizedBox(height: mQuery.size.height*0.01,),
                         Row(
@@ -169,7 +170,7 @@ class _HomePageState extends State<HomePage> {
                               status ? 'Online' : 'Offline',
                               style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 15
+                                fontFamily: 'SatoshiMedium',
                               ),
                             ),
                             SizedBox(width: mQuery.size.width*0.012,),
@@ -215,12 +216,14 @@ class _HomePageState extends State<HomePage> {
                       cursorColor: Colors.grey,
                       controller: searchController,
                       decoration: InputDecoration(
+                        contentPadding: EdgeInsets.only(
+                          top: 5
+                        ),
                         border: InputBorder.none,
                         hintText: "Search",
                         hintStyle: TextStyle(
-                            fontSize: mQuery.size.height * 0.018,
                             color: const Color.fromARGB(255, 179, 179, 179),
-                            fontFamily: 'PoppinsMedium'),
+                            fontFamily: 'SatoshiMedium'),
                         suffixIcon: const Icon(Icons.search,
                             color: Color.fromARGB(255, 179, 179, 179)),
                       ),
@@ -258,8 +261,8 @@ class _HomePageState extends State<HomePage> {
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.grey.withOpacity(0.5),
-                                  spreadRadius: 2,
-                                  blurRadius: 10,
+                                  spreadRadius: 0,
+                                  blurRadius: 7,
                                   offset: const Offset(0, 0),
                                 ),
                               ],
@@ -279,7 +282,7 @@ class _HomePageState extends State<HomePage> {
                                   item["text"],
                                   style: TextStyle(
                                     fontSize: mQuery.size.height * 0.014,
-                                    fontFamily: 'PoppinsSemiBold',
+                                    fontFamily: 'SatoshiBold',
                                   ),
                                 ),
                               ],
@@ -325,7 +328,7 @@ class _HomePageState extends State<HomePage> {
                                 style: TextStyle(
                                     fontSize: mQuery.size.height * 0.018,
                                     color: Colors.white,
-                                    fontFamily: 'PoppinsSemiBold'),
+                                    fontFamily: 'SatoshiBold'),
                               ),
                             ],
                           ),
@@ -361,8 +364,8 @@ class _HomePageState extends State<HomePage> {
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.grey.withOpacity(0.5),
-                                  spreadRadius: 2,
-                                  blurRadius: 10,
+                                  spreadRadius: 0,
+                                  blurRadius: 7,
                                   offset: const Offset(0, 0),
                                 ),
                               ],
@@ -382,7 +385,7 @@ class _HomePageState extends State<HomePage> {
                                   gridItems2[0]["text"],
                                   style: TextStyle(
                                     fontSize: mQuery.size.height * 0.014,
-                                    fontFamily: 'PoppinsSemiBold',
+                                    fontFamily: 'SatoshiBold',
                                   ),
                                 ),
                                 const SizedBox(
@@ -400,7 +403,7 @@ class _HomePageState extends State<HomePage> {
                                       gridItems2[0]["earnings"],
                                       style: TextStyle(
                                         fontSize: mQuery.size.height * 0.012,
-                                        fontFamily: 'PoppinsSemiBold',
+                                        fontFamily: 'SatoshiBold',
                                         color: Colors.white,
                                       ),
                                     ),
@@ -432,8 +435,8 @@ class _HomePageState extends State<HomePage> {
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.grey.withOpacity(0.5),
-                                  spreadRadius: 2,
-                                  blurRadius: 10,
+                                  spreadRadius: 0,
+                                  blurRadius: 7,
                                   offset: const Offset(0, 0),
                                 ),
                               ],
@@ -453,7 +456,7 @@ class _HomePageState extends State<HomePage> {
                                   gridItems2[1]["text"],
                                   style: TextStyle(
                                     fontSize: mQuery.size.height * 0.014,
-                                    fontFamily: 'PoppinsSemiBold',
+                                    fontFamily: 'SatoshiBold',
                                   ),
                                 ),
 
@@ -469,7 +472,7 @@ class _HomePageState extends State<HomePage> {
                                       gridItems2[1]["earnings"],
                                       style: TextStyle(
                                         fontSize: mQuery.size.height * 0.012,
-                                        fontFamily: 'PoppinsSemiBold',
+                                        fontFamily: 'SatoshiBold',
                                         color: Colors.white,
                                       ),
                                     ),

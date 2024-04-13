@@ -57,7 +57,7 @@ class _WelcomePageState extends State<WelcomePage> {
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: mQuery.size.height*0.023,
-                                  fontFamily: 'PoppinsSemiBold'),
+                                  fontFamily: 'SatoshiBold'),
                             )),
                       ),
                     ),
@@ -85,7 +85,7 @@ class _WelcomePageState extends State<WelcomePage> {
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: mQuery.size.height*0.023,
-                                  fontFamily: 'PoppinsSemiBold'),
+                                  fontFamily: 'SatoshiBold'),
                             )),
                       ),
                     ),
@@ -96,7 +96,7 @@ class _WelcomePageState extends State<WelcomePage> {
                         "Terms",
                         style: TextStyle(
                             fontSize: mQuery.size.height*0.02,
-                            color: Colors.white, fontFamily: 'PoppinsSemiBold'),
+                            color: Colors.white, fontFamily: 'SatoshiBold'),
                       ),
                     ),
 
@@ -123,7 +123,7 @@ class _WelcomePageState extends State<WelcomePage> {
                                 style: TextStyle(
                                     fontSize: mQuery.size.height*0.014,
                                     color: Colors.white,
-                                    fontFamily: 'PoppinsSemiBold'),
+                                    fontFamily: 'SatoshiBold'),
                               ),
                               SizedBox(height: 5.0,),
                               Container(
@@ -151,7 +151,7 @@ class _WelcomePageState extends State<WelcomePage> {
                                 style: TextStyle(
                                     fontSize: mQuery.size.height*0.014,
                                     color: Colors.white,
-                                    fontFamily: 'PoppinsSemiBold'),
+                                    fontFamily: 'SatoshiBold'),
                               ),
                               SizedBox(height: 5.0,),
                               Container(
@@ -179,7 +179,7 @@ class _WelcomePageState extends State<WelcomePage> {
                                 style: TextStyle(
                                     fontSize: mQuery.size.height*0.014,
                                     color: Colors.white,
-                                    fontFamily: 'PoppinsSemiBold'),
+                                    fontFamily: 'SatoshiBold'),
                               ),
                               SizedBox(height: 5.0,),
                               Container(

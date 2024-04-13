@@ -51,7 +51,7 @@ class _VerifiedState extends State<Verified> {
                     style: TextStyle(
                       fontSize: 20,
                       color: Colors.white,
-                      fontFamily: 'PoppinsSemiBold',
+                      fontFamily: 'SatoshiBold',
                     ),
                   )
                 ],
@@ -104,7 +104,7 @@ class _VerifiedState extends State<Verified> {
                               child: Text(
                                 "Your profile setup is completed seccesfully.",
                                 style: TextStyle(
-                                    fontFamily: 'PoppinsMedium',
+                                    fontFamily: 'SatoshiMedium',
                                     fontSize: mQuery.size.height * 0.014),
                               ),
                             ),
@@ -138,7 +138,7 @@ class _VerifiedState extends State<Verified> {
                                 style: TextStyle(
                                     fontSize: mQuery.size.height * 0.02,
                                     color: Colors.white,
-                                    fontFamily: 'PoppinsSemiBold'),
+                                    fontFamily: 'SatoshiBold'),
                               ),
                             ),
                           ),

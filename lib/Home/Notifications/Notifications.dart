@@ -33,7 +33,7 @@ class _NotificationsState extends State<Notifications> {
             SizedBox(height: mQuery.size.height * 0.034),
             Padding(
               padding: const EdgeInsets.only(
-                  top: 45, left: 16, right: 16, bottom: 20),
+                  top: 45, left: 16, bottom: 20),
               child: Row(
                 children: [
                   GestureDetector(
@@ -48,26 +48,30 @@ class _NotificationsState extends State<Notifications> {
                   SizedBox(
                     width: mQuery.size.width * 0.045,
                   ),
-                  Row(
-                    children: [
-                      const Text(
-                        "Notifications",
-                        style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.white,
-                            fontWeight: FontWeight.w700),
-                      ),
-                      SizedBox(
-                        width: mQuery.size.width * 0.32,
-                      ),
-                      const Text(
-                        "Clear All",
-                        style: TextStyle(
-                            fontSize: 14,
-                            color: Colors.white,
-                            fontWeight: FontWeight.w400),
-                      ),
-                    ],
+                  Padding(
+                    padding: EdgeInsets.only(
+                      right: 16
+                    ),
+                    child: Row(
+                      children: [
+                        const Text(
+                          "Notifications",
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontFamily : "SatoshiBold",
+                              color: Colors.white,
+                          ),
+                        ),
+                        SizedBox(width: mQuery.size.width*0.24,),
+                        Text(
+                          "Clear All",
+                          style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.white,
+                              fontFamily: 'SatoshiBold'),
+                        ),
+                      ],
+                    ),
                   )
                 ],
               ),
@@ -83,10 +87,9 @@ class _NotificationsState extends State<Notifications> {
                   boxShadow: [
                     BoxShadow(
                       color: Colors.grey.withOpacity(0.5),
-                      spreadRadius: 0.3,
-                      blurRadius: 1,
-                      offset: const Offset(
-                          3, 3), // changes the position of the shadow
+                      spreadRadius: 0,
+                      blurRadius: 0,
+                      offset: const Offset(0,0), // changes the position of the shadow
                     ),
                   ],
                 ),
@@ -105,7 +108,7 @@ class _NotificationsState extends State<Notifications> {
                                 data['notidate'],
                                 style: const TextStyle(
                                     color: Color.fromARGB(255, 181, 181, 181),
-                                    fontWeight: FontWeight.w600,
+                                    fontFamily: 'SatoshiMedium',
                                     fontSize: 12.0),
                               ),
                             ],
@@ -120,10 +123,10 @@ class _NotificationsState extends State<Notifications> {
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.grey.withOpacity(0.4),
-                                  spreadRadius: 3,
-                                  blurRadius: 8,
+                                  spreadRadius: 0,
+                                  blurRadius: 7,
                                   offset: const Offset(
-                                      0, 3), // changes position of shadow
+                                      0, 0), // changes position of shadow
                                 ),
                               ],
                               color: Colors.white,
@@ -156,9 +159,8 @@ class _NotificationsState extends State<Notifications> {
                                             children: [
                                               Text(
                                                 '${data['notitype']}',
-                                                style: const TextStyle(
-                                                    fontSize: 16,
-                                                    fontWeight: FontWeight.w700,
+                                                style: TextStyle(
+                                                    fontFamily : "SatoshiBold",
                                                     color: Color(0xff29b2fe)),
                                               ),
                                               data["status"] == 'pickup'
@@ -166,16 +168,14 @@ class _NotificationsState extends State<Notifications> {
                                                 "You successfully picked up the order from ",
                                                 style: TextStyle(
                                                     fontSize: 11,
-                                                    fontWeight:
-                                                    FontWeight.w400,
+                                                    fontFamily: 'SatoshiMedium',
                                                     color: Colors.black),
                                               )
-                                                  : const Text(
+                                                  : Text(
                                                 "You successfully delivered the order to",
                                                 style: TextStyle(
                                                     fontSize: 11,
-                                                    fontWeight:
-                                                    FontWeight.w400,
+                                                    fontFamily: 'SatoshiMedium',
                                                     color: Colors.black),
                                               ),
                                             ],
@@ -219,7 +219,7 @@ class _NotificationsState extends State<Notifications> {
                                                 color: Colors.black87,
                                                 fontSize:
                                                 mQuery.size.height * 0.012,
-                                                fontFamily: 'PoppinsMedium'),
+                                                fontFamily: 'SatoshiMedium'),
                                           ),
                                           Text(
                                             '${data['ordernumber']}',
@@ -227,7 +227,7 @@ class _NotificationsState extends State<Notifications> {
                                                 color: Colors.black87,
                                                 fontSize:
                                                 mQuery.size.height * 0.012,
-                                                fontFamily: 'PoppinsMedium'),
+                                                fontFamily: 'SatoshiMedium'),
                                           ),
                                         ],
                                       )
@@ -252,7 +252,7 @@ class _NotificationsState extends State<Notifications> {
                                           "Please share your valuable feedback with us.",
                                           style: TextStyle(
                                             fontSize: 13,
-                                            fontWeight: FontWeight.w500,
+                                            fontFamily: 'SatoshiMedium'
                                           ),
                                         ),
                                         const SizedBox(
@@ -282,7 +282,7 @@ class _NotificationsState extends State<Notifications> {
                                                 "SUBMIT REVIEW",
                                                 style: TextStyle(
                                                   fontSize: 8,
-                                                  fontWeight: FontWeight.w400,
+                                                  fontFamily: 'SatoshiBold',
                                                   color: Colors.white,
                                                 ),
                                               ),
@@ -311,6 +311,7 @@ class _NotificationsState extends State<Notifications> {
                                     data["notitime"],
                                     style: const TextStyle(
                                       color: Colors.grey,
+                                      fontFamily: 'SatoshiMedium',
                                       fontSize: 12.0,
                                     ),
                                   ),

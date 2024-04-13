@@ -1,7 +1,5 @@
-
 import 'package:cleaneo_driver_app/Home/Home_/Home.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:pinput/pinput.dart';
 
 class DeliveryOTPPage extends StatefulWidget {
@@ -49,7 +47,7 @@ class _DeliveryOTPPageState extends State<DeliveryOTPPage> {
             color: Colors.grey.withOpacity(0.45),
             spreadRadius: 0,
             blurRadius: 10,
-            offset: Offset(0, 0),
+            offset: const Offset(0, 0),
           ),
         ],
       ),
@@ -69,14 +67,11 @@ class _DeliveryOTPPageState extends State<DeliveryOTPPage> {
               left: mQuery.size.width * 0.045,
               right: mQuery.size.width * 0.045,
             ),
-            child: Row(
-              children: [],
-            ),
           ),
           Expanded(
             child: Container(
               width: double.infinity,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(16),
@@ -158,24 +153,22 @@ class OTPBox extends StatelessWidget {
   final FocusNode focusNode;
   final bool isFocused;
 
-  OTPBox({required this.controller, required this.focusNode, required this.isFocused});
+  const OTPBox({super.key, required this.controller, required this.focusNode, required this.isFocused});
 
   @override
   Widget build(BuildContext context) {
     var mQuery = MediaQuery.of(context);
-    return Container(
-      child: TextField(
-        controller: controller,
-        focusNode: focusNode,
-        textAlign: TextAlign.center,
-        keyboardType: TextInputType.number,
-        maxLength: 1,
-        decoration: InputDecoration(
-          counterText: "",
-          border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8),
-              borderSide: BorderSide.none),
-        ),
+    return TextField(
+      controller: controller,
+      focusNode: focusNode,
+      textAlign: TextAlign.center,
+      keyboardType: TextInputType.number,
+      maxLength: 1,
+      decoration: InputDecoration(
+        counterText: "",
+        border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8),
+            borderSide: BorderSide.none),
       ),
     );
   }

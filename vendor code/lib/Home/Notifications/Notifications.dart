@@ -219,7 +219,7 @@ class _NotificationsState extends State<Notifications> {
                                                 color: Colors.black87,
                                                 fontSize:
                                                 mQuery.size.height * 0.012,
-                                                fontFamily: 'PoppinsMedium'),
+                                                fontFamily: 'SatoshiMedium'),
                                           ),
                                           Text(
                                             '${data['ordernumber']}',
@@ -227,7 +227,7 @@ class _NotificationsState extends State<Notifications> {
                                                 color: Colors.black87,
                                                 fontSize:
                                                 mQuery.size.height * 0.012,
-                                                fontFamily: 'PoppinsMedium'),
+                                                fontFamily: 'SatoshiMedium'),
                                           ),
                                         ],
                                       )

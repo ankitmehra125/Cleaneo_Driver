@@ -61,7 +61,7 @@ class _RatingPageState extends State<RatingPage> {
                     Text(
                       "Rate Your Experience",
                       style: TextStyle(
-                          fontSize: mQuery.size.height * 0.027,
+                          fontSize: 20,
                           fontFamily: 'SatoshiBold',
                           color: Colors.white),
                     )
@@ -77,15 +77,6 @@ class _RatingPageState extends State<RatingPage> {
                   borderRadius: const BorderRadius.only(
                       topLeft: Radius.circular(16),
                       topRight: Radius.circular(16)),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.5),
-                      spreadRadius: 0.3,
-                      blurRadius: 1,
-                      offset: const Offset(
-                          3, 3), // changes the position of the shadow
-                    ),
-                  ],
                 ),
                 child: Padding(
                   padding: EdgeInsets.symmetric(
@@ -154,8 +145,8 @@ class _RatingPageState extends State<RatingPage> {
                             boxShadow: [
                               BoxShadow(
                                 color: Colors.grey.withOpacity(0.5),
-                                spreadRadius: 0.3,
-                                blurRadius: 10,
+                                spreadRadius: 0,
+                                blurRadius: 7,
                                 offset: const Offset(
                                     0, 0), // changes the position of the shadow
                               ),
@@ -245,7 +236,7 @@ class _RatingPageState extends State<RatingPage> {
                               child: Text(
                                 "Submit",
                                 style: TextStyle(
-                                  fontSize: mQuery.size.height * 0.024,
+                                  fontSize: 16,
                                   color: Colors.white,
                                   fontFamily: 'SatoshiBold',
                                 ),
@@ -273,17 +264,21 @@ class _RatingPageState extends State<RatingPage> {
         return AlertDialog(
           backgroundColor: Colors.white,
           title: const Center(
-              child: Text(
-            "Thank You!",
-            style: TextStyle(
-              color: Color(0xff29b2fe),
-              fontFamily: 'SatoshiBold',
+            child: Text(
+              "Thank You!",
+              style: TextStyle(
+                color: Color(0xff29b2fe),
+                fontFamily: 'SatoshiBold',
+              ),
             ),
-          )),
+          ),
           content: Padding(
-            padding:
-                EdgeInsets.symmetric(horizontal: mQuery.size.width * 0.033),
-            child:  Column(
+            padding: EdgeInsets.symmetric(
+              horizontal: mQuery.size.width * 0.033,
+              vertical: mQuery.size.height * 0.01, // Adjusted vertical padding
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min, // Set to min to reduce height
               children: [
                 Text(
                   "Your review is successfully ",
@@ -301,27 +296,29 @@ class _RatingPageState extends State<RatingPage> {
             ),
           ),
           actions: <Widget>[
-            GestureDetector(
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.pushReplacement(context,
-                    MaterialPageRoute(builder: (context) {
-                  return const BotNav();
-                }));
-              },
-              child: Container(
-                width: double.infinity,
-                height: mQuery.size.height * 0.06,
-                decoration: BoxDecoration(
-                    color: const Color(0xff29b2fe),
-                    borderRadius: BorderRadius.circular(8)),
+            Container(
+              width: double.infinity,
+              height: mQuery.size.height * 0.05, // Adjusted height
+              decoration: BoxDecoration(
+                color: const Color(0xff29b2fe),
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: TextButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) {
+                        return const BotNav();
+                      }));
+                },
                 child: Center(
                   child: Text(
                     "Okay",
                     style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'SatoshiBold',
-                        fontSize: mQuery.size.height * 0.024),
+                      color: Colors.white,
+                      fontFamily: 'SatoshiBold',
+                      fontSize: mQuery.size.height * 0.024,
+                    ),
                   ),
                 ),
               ),
@@ -331,4 +328,5 @@ class _RatingPageState extends State<RatingPage> {
       },
     );
   }
+
 }

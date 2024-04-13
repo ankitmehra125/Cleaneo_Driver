@@ -1,7 +1,10 @@
+import 'package:camera/camera.dart';
 import 'package:cleaneo_driver_app/Screens/Driver_Onboarding/VehDetails.dart';
 import 'package:cleaneo_driver_app/Screens/Driver_Onboarding/uploadAdhaar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:image_picker/image_picker.dart';
+import 'dart:io';
 
 class DL extends StatefulWidget {
   const DL({Key? key}) : super(key: key);
@@ -11,9 +14,10 @@ class DL extends StatefulWidget {
 }
 
 class _DLState extends State<DL> {
-  TextEditingController storeNameController = TextEditingController();
-  TextEditingController addressController = TextEditingController();
-  TextEditingController gstinController = TextEditingController();
+  TextEditingController expDateController = TextEditingController();
+  XFile? _image1;
+  XFile? _image2;
+  final ImagePicker _imagePicker = ImagePicker();
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +53,7 @@ class _DLState extends State<DL> {
                     style: TextStyle(
                       fontSize: 20,
                       color: Colors.white,
-                      fontFamily: 'PoppinsSemiBold',
+                      fontFamily: 'SatoshiBold',
                     ),
                   )
                 ],
@@ -75,8 +79,7 @@ class _DLState extends State<DL> {
                               child: const Text(
                                 "Take a picture of the front and back side of your document in a HORIZONTAL position.",
                                 style: TextStyle(
-                                    fontFamily: 'PoppinsSemiBold',
-                                    fontSize: 14),
+                                    fontFamily: "SatoshiMedium"),
                               ),
                             ),
                           ],
@@ -93,9 +96,9 @@ class _DLState extends State<DL> {
                             color: Colors.white,
                             boxShadow: [
                               BoxShadow(
-                                color: Colors.grey.withOpacity(0.5),
-                                spreadRadius: 2,
-                                blurRadius: 10,
+                                color: Colors.grey.withOpacity(0.3),
+                                spreadRadius: 0,
+                                blurRadius: 7,
                                 offset: const Offset(
                                     0, 0), // changes the position of the shadow
                               ),
@@ -103,14 +106,14 @@ class _DLState extends State<DL> {
                           ),
                           child: TextField(
                             cursorColor: Colors.grey,
-                            controller: storeNameController,
+                            controller: expDateController,
                             decoration: const InputDecoration(
                               focusedBorder: InputBorder.none,
                               enabledBorder: InputBorder.none,
                               hintText: "Enter Expiry Date",
                               hintStyle: TextStyle(
                                   fontSize: 13,
-                                  fontFamily: 'PoppinsSemiBold',
+                                  fontFamily: 'SatoshiMedium',
                                   color: Color(0xffABAFB1)),
                             ),
                           ),
@@ -118,9 +121,10 @@ class _DLState extends State<DL> {
                         SizedBox(
                           height: mQuery.size.height * 0.05,
                         ),
-                        SvgPicture.asset("assets/adhaarpicker.svg"),
-                        SvgPicture.asset("assets/adhaarpicker.svg"),
-                        const Spacer(),
+                        buildImageContainer(mQuery, _image1, 1), // First Image Container
+                        SizedBox(height: mQuery.size.height * 0.035,),
+                        buildImageContainer(mQuery, _image2, 2),
+                        SizedBox(height: mQuery.size.height*0.07,),
                         Column(
                           children: [
                             GestureDetector(
@@ -140,9 +144,9 @@ class _DLState extends State<DL> {
                                   child: const Text(
                                     "Next",
                                     style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: 16,
                                       color: Colors.white,
-                                      fontFamily: 'PoppinsSemiBold',
+                                      fontFamily: 'SatoshiBold',
                                     ),
                                   ),
                                 ),
@@ -158,6 +162,80 @@ class _DLState extends State<DL> {
             )
           ],
         ),
+      ),
+    );
+  }
+
+  Widget buildImageContainer(
+      MediaQueryData mQuery, XFile? imageFile, int index) {
+    return GestureDetector(
+      onTap: () async {
+        final imageSource = await showModalBottomSheet<ImageSource>(
+          backgroundColor: Colors.white,
+          context: context,
+          builder: (BuildContext context) {
+            return SafeArea(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  ListTile(
+                    leading: Icon(Icons.camera_alt),
+                    title: Text(
+                      'Camera',
+                      style: TextStyle(
+                        fontFamily: 'SatoshiMedium',
+                      ),
+                    ),
+                    onTap: () =>
+                        Navigator.of(context).pop(ImageSource.camera),
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.photo_library),
+                    title: Text(
+                      'Gallery',
+                      style: TextStyle(
+                        fontFamily: 'SatoshiMedium',
+                      ),
+                    ),
+                    onTap: () =>
+                        Navigator.of(context).pop(ImageSource.gallery),
+                  ),
+                ],
+              ),
+            );
+          },
+        );
+        if (imageSource != null) {
+          final XFile? pickedImage =
+          await _imagePicker.pickImage(source: imageSource);
+
+          setState(() {
+            if (index == 1) {
+              _image1 = pickedImage;
+            } else if (index == 2) {
+              _image2 = pickedImage;
+            }
+          });
+        }
+      },
+      child: Container(
+        width: double.infinity,
+        height: mQuery.size.height * 0.2,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          image: imageFile != null
+              ? DecorationImage(
+            image: FileImage(File(imageFile.path)),
+            fit: BoxFit.cover,
+          )
+              : null, // Null if imageFile is null
+        ),
+        child: imageFile == null
+            ? SvgPicture.asset(
+          "assets/adhaarpicker.svg",
+          height: mQuery.size.height * 0.2,
+        )
+            : null, // No child if imageFile is not null
       ),
     );
   }

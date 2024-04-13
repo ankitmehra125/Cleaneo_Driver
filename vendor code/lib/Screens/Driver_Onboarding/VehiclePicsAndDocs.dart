@@ -53,7 +53,7 @@ class _VehPicsState extends State<VehPics> {
                       style: TextStyle(
                         fontSize: 20,
                         color: Colors.white,
-                        fontFamily: 'PoppinsSemiBold',
+                        fontFamily: 'SatoshiBold',
                       ),
                     )
                   ],
@@ -90,7 +90,7 @@ class _VehPicsState extends State<VehPics> {
                             Text(
                               "Upload vehicle Pictures*",
                               style: TextStyle(
-                                  fontFamily: 'PoppinsSemiBold',
+                                  fontFamily: 'SatoshiBold',
                                   fontSize: mQuery.size.height * 0.015),
                             ),
                           ],
@@ -119,7 +119,7 @@ class _VehPicsState extends State<VehPics> {
                             Text(
                               "Upload vehicle Documents*",
                               style: TextStyle(
-                                  fontFamily: 'PoppinsSemiBold',
+                                  fontFamily: 'SatoshiBold',
                                   fontSize: mQuery.size.height * 0.015),
                             ),
                           ],
@@ -160,7 +160,7 @@ class _VehPicsState extends State<VehPics> {
                                 style: TextStyle(
                                     fontSize: mQuery.size.height * 0.02,
                                     color: Colors.white,
-                                    fontFamily: 'PoppinsSemiBold'),
+                                    fontFamily: 'SatoshiBold'),
                               ),
                             ),
                           ),

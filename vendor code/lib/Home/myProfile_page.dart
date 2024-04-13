@@ -75,7 +75,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
                   Text(
                     "My Profile",
                     style: TextStyle(
-                        fontSize: mQuery.size.height*0.027,
+                        fontSize: 20,
                         color: Colors.white,
                         fontFamily: 'SatoshiBold'),
                   )
@@ -336,7 +336,7 @@ class _MyProfilePageState extends State<MyProfilePage> {
                                   child: Text(
                                     "Save & Continue",
                                     style: TextStyle(
-                                        fontSize: mQuery.size.height*0.022,
+                                        fontSize: 16,
                                         color: Colors.white,
                                         fontFamily: 'SatoshiBold'
                                     ),

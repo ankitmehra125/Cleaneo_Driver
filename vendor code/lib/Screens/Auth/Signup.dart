@@ -63,7 +63,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     style: TextStyle(
                         fontSize: mQuery.size.height * 0.027,
                         color: Colors.white,
-                        fontFamily: 'PoppinsSemiBold'),
+                        fontFamily: 'SatoshiBold'),
                   )
                 ],
               ),
@@ -86,7 +86,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         Text(
                           "Full Name",
                           style: TextStyle(
-                            fontFamily: 'PoppinsSemiBold',
+                            fontFamily: 'SatoshiBold',
                             fontSize: mQuery.size.height * 0.015,
                           ),
                         ),
@@ -123,7 +123,7 @@ class _SignUpPageState extends State<SignUpPage> {
                               hintText: "Enter Full Name",
                               hintStyle: TextStyle(
                                   fontSize: mQuery.size.height * 0.015,
-                                  fontFamily: 'PoppinsMedium',
+                                  fontFamily: 'SatoshiMedium',
                                   color: const Color.fromARGB(255, 161, 161, 161)),
                               contentPadding:
                                   const EdgeInsets.symmetric(vertical: 12),
@@ -138,7 +138,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         Text(
                           "Phone Number",
                           style: TextStyle(
-                            fontFamily: 'PoppinsMedium',
+                            fontFamily: 'SatoshiMedium',
                             fontSize: mQuery.size.height * 0.015,
                           ),
                         ),
@@ -204,7 +204,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                     hintText: "Enter Phone Number*",
                                     hintStyle: TextStyle(
                                       fontSize: mQuery.size.height * 0.015,
-                                      fontFamily: 'PoppinsMedium',
+                                      fontFamily: 'SatoshiMedium',
                                       color: const Color(0xffABAFB1),
                                     ),
                                     contentPadding:
@@ -226,7 +226,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         Text(
                           "Email",
                           style: TextStyle(
-                            fontFamily: 'PoppinsMedium',
+                            fontFamily: 'SatoshiMedium',
                             fontSize: mQuery.size.height * 0.015,
                           ),
                         ),
@@ -260,7 +260,7 @@ class _SignUpPageState extends State<SignUpPage> {
                               hintText: "Enter Email",
                               hintStyle: TextStyle(
                                 fontSize: mQuery.size.height * 0.015,
-                                fontFamily: 'PoppinsMedium',
+                                fontFamily: 'SatoshiMedium',
                                 color: const Color.fromARGB(255, 201, 201, 201),
                               ),
                               contentPadding:
@@ -276,7 +276,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           "*We'll send a one time 4-digit OTP to your phone or email to verify.",
                           style: TextStyle(
                               fontSize: mQuery.size.height * 0.012,
-                              fontFamily: 'PoppinsMedium'),
+                              fontFamily: 'SatoshiMedium'),
                         ),
 
                         SizedBox(
@@ -301,7 +301,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                 style: TextStyle(
                                     fontSize: mQuery.size.height * 0.022,
                                     color: Colors.white,
-                                    fontFamily: 'PoppinsSemiBold'),
+                                    fontFamily: 'SatoshiBold'),
                               ),
                             ),
                           ),
@@ -316,14 +316,14 @@ class _SignUpPageState extends State<SignUpPage> {
                               "Already have an account?",
                               style: TextStyle(
                                   fontSize: mQuery.size.height * 0.015,
-                                  fontFamily: 'PoppinsMedium'),
+                                  fontFamily: 'SatoshiMedium'),
                             ),
                             TextButton(
                               child: Text(
                                 "Log In",
                                 style: TextStyle(
                                     fontSize: mQuery.size.height * 0.015,
-                                    fontFamily: 'PoppinsSemiBold',
+                                    fontFamily: 'SatoshiBold',
                                     color: const Color(0xff29b2fe)),
                               ),
                               onPressed: () {

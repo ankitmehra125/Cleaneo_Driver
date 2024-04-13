@@ -75,7 +75,7 @@ class _DeliveryState extends State<Delivery> {
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: mQuery.size.height * 0.022,
-                              fontFamily: 'PoppinsSemiBold'),
+                              fontFamily: 'SatoshiBold'),
                         ),
                         SizedBox(
                           width: mQuery.size.height * 0.1,
@@ -85,7 +85,7 @@ class _DeliveryState extends State<Delivery> {
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: mQuery.size.height * 0.012,
-                            fontFamily: 'PoppinsMedium',
+                            fontFamily: 'SatoshiMedium',
                           ),
                         ),
                       ],

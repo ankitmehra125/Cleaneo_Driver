@@ -96,7 +96,7 @@ flutter:
     - family: PoppinsBlack
       fonts:
         - asset: assets/Fonts/Poppins-Black.ttf
-    - family: PoppinsBold
+    - family: SatoshiBold
       fonts:
         - asset: assets/Fonts/Poppins-Bold.ttf
     - family: PoppinsExtraBold
@@ -108,13 +108,13 @@ flutter:
     - family: PoppinsLight
       fonts:
         - asset: assets/Fonts/Poppins-Light.ttf
-    - family: PoppinsMedium
+    - family: SatoshiMedium
       fonts:
         - asset: assets/Fonts/Poppins-Medium.ttf
     - family: PoppinsRegular
       fonts:
         - asset: assets/Fonts/Poppins-Regular.ttf
-    - family: PoppinsSemiBold
+    - family: SatoshiBold
       fonts:
         - asset: assets/Fonts/Poppins-SemiBold.ttf
     - family: PoppinsThin

@@ -34,9 +34,8 @@ class _VehDetailsFiledsState extends State<VehDetailsFileds> {
                 color:
                     const Color.fromARGB(255, 201, 201, 201).withOpacity(0.5),
                 spreadRadius: 0,
-                blurRadius: 10,
-                offset:
-                    const Offset(0, 0), // changes the position of the shadow
+                blurRadius: 7,
+                offset: const Offset(0, 0), // changes the position of the shadow
               ),
             ],
           ),
@@ -51,10 +50,10 @@ class _VehDetailsFiledsState extends State<VehDetailsFileds> {
                 hintText: widget.hintText,
                 hintStyle: TextStyle(
                   fontSize: mQuery.size.height * 0.015,
-                  fontFamily: 'PoppinsMedium',
+                  fontFamily: 'SatoshiMedium',
                   color: const Color.fromARGB(255, 161, 161, 161),
                 ),
-                contentPadding: const EdgeInsets.symmetric(vertical: 12),
+                contentPadding: const EdgeInsets.symmetric(vertical: 18),
               ),
             ),
           ),

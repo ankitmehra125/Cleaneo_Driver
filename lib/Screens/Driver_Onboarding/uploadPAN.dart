@@ -12,9 +12,7 @@ class UploadPAN extends StatefulWidget {
 }
 
 class _UploadPANState extends State<UploadPAN> {
-  TextEditingController storeNameController = TextEditingController();
-  TextEditingController addressController = TextEditingController();
-  TextEditingController gstinController = TextEditingController();
+  TextEditingController panController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +48,7 @@ class _UploadPANState extends State<UploadPAN> {
                     style: TextStyle(
                       fontSize: 20,
                       color: Colors.white,
-                      fontFamily: 'PoppinsSemiBold',
+                      fontFamily: 'SatoshiBold',
                     ),
                   )
                 ],
@@ -67,10 +65,9 @@ class _UploadPANState extends State<UploadPAN> {
                   boxShadow: [
                     BoxShadow(
                       color: Colors.grey.withOpacity(0.5),
-                      spreadRadius: 0.3,
-                      blurRadius: 1,
-                      offset: const Offset(
-                          3, 3), // changes the position of the shadow
+                      spreadRadius: 0,
+                      blurRadius: 7,
+                      offset: const Offset(0,0), // changes the position of the shadow
                     ),
                   ],
                 ),
@@ -85,8 +82,7 @@ class _UploadPANState extends State<UploadPAN> {
                               child: const Text(
                                 "Take a picture of the front and back side of your document in a HORIZONTAL position.",
                                 style: TextStyle(
-                                    fontFamily: 'PoppinsSemiBold',
-                                    fontSize: 14),
+                                    fontFamily: 'SatoshiMedium'),
                               ),
                             ),
                           ],
@@ -113,14 +109,14 @@ class _UploadPANState extends State<UploadPAN> {
                           ),
                           child: TextField(
                             cursorColor: Colors.grey,
-                            controller: storeNameController,
+                            controller: panController,
                             decoration: const InputDecoration(
                               focusedBorder: InputBorder.none,
                               enabledBorder: InputBorder.none,
                               hintText: "Enter PAN Card Number",
                               hintStyle: TextStyle(
                                   fontSize: 13,
-                                  fontFamily: 'PoppinsSemiBold',
+                                  fontFamily: 'SatoshiBold',
                                   color: Color(0xffABAFB1)),
                             ),
                           ),
@@ -150,9 +146,9 @@ class _UploadPANState extends State<UploadPAN> {
                                   child: const Text(
                                     "Next",
                                     style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: 16,
                                       color: Colors.white,
-                                      fontFamily: 'PoppinsSemiBold',
+                                      fontFamily: 'SatoshiBold',
                                     ),
                                   ),
                                 ),

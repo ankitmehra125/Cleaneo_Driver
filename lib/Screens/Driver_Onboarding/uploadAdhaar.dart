@@ -12,9 +12,7 @@ class UploadAdhaar extends StatefulWidget {
 }
 
 class _UploadAdhaarState extends State<UploadAdhaar> {
-  TextEditingController storeNameController = TextEditingController();
-  TextEditingController addressController = TextEditingController();
-  TextEditingController gstinController = TextEditingController();
+  TextEditingController aadharController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +48,7 @@ class _UploadAdhaarState extends State<UploadAdhaar> {
                     style: TextStyle(
                       fontSize: 20,
                       color: Colors.white,
-                      fontFamily: 'PoppinsSemiBold',
+                      fontFamily: 'SatoshiBold',
                     ),
                   )
                 ],
@@ -67,10 +65,10 @@ class _UploadAdhaarState extends State<UploadAdhaar> {
                   boxShadow: [
                     BoxShadow(
                       color: Colors.grey.withOpacity(0.5),
-                      spreadRadius: 0.3,
-                      blurRadius: 1,
+                      spreadRadius: 0,
+                      blurRadius: 7,
                       offset: const Offset(
-                          3, 3), // changes the position of the shadow
+                          0,0), // changes the position of the shadow
                     ),
                   ],
                 ),
@@ -85,8 +83,7 @@ class _UploadAdhaarState extends State<UploadAdhaar> {
                               child: const Text(
                                 "Take a picture of the front and back side of your document in a HORIZONTAL position.",
                                 style: TextStyle(
-                                  fontFamily: 'PoppinsSemiBold',
-                                  fontSize: 15,
+                                  fontFamily: 'SatoshiMedium',
                                 ),
                               ),
                             ),
@@ -105,8 +102,8 @@ class _UploadAdhaarState extends State<UploadAdhaar> {
                             boxShadow: [
                               BoxShadow(
                                 color: Colors.grey.withOpacity(0.5),
-                                spreadRadius: 2,
-                                blurRadius: 10,
+                                spreadRadius: 0,
+                                blurRadius: 7,
                                 offset: const Offset(
                                     0, 0), // changes the position of the shadow
                               ),
@@ -114,14 +111,14 @@ class _UploadAdhaarState extends State<UploadAdhaar> {
                           ),
                           child: TextField(
                             cursorColor: Colors.grey,
-                            controller: storeNameController,
+                            controller: aadharController,
                             decoration: const InputDecoration(
                               focusedBorder: InputBorder.none,
                               enabledBorder: InputBorder.none,
                               hintText: "Enter Aadhaar Number",
                               hintStyle: TextStyle(
                                   fontSize: 13,
-                                  fontFamily: 'PoppinsSemiBold',
+                                  fontFamily: 'SatoshiMedium',
                                   color: Color(0xffABAFB1)),
                             ),
                           ),
@@ -151,9 +148,9 @@ class _UploadAdhaarState extends State<UploadAdhaar> {
                                   child: const Text(
                                     "Next",
                                     style: TextStyle(
-                                      fontSize: 15,
+                                      fontSize: 16,
                                       color: Colors.white,
-                                      fontFamily: 'PoppinsSemiBold',
+                                      fontFamily: 'SatoshiBold',
                                     ),
                                   ),
                                 ),

@@ -51,7 +51,7 @@ class _VerifyingState extends State<Verifying> {
                     style: TextStyle(
                       fontSize: 20,
                       color: Colors.white,
-                      fontFamily: 'PoppinsSemiBold',
+                      fontFamily: 'SatoshiBold',
                     ),
                   )
                 ],
@@ -89,7 +89,7 @@ class _VerifyingState extends State<Verifying> {
                               child: Text(
                                 "We have received your profile details, our support team will get in touch & activate your account soon. You will receive a notification.",
                                 style: TextStyle(
-                                    fontFamily: 'PoppinsSemiBold',
+                                    fontFamily: 'SatoshiBold',
                                     fontSize: mQuery.size.height * 0.015),
                               ),
                             ),

@@ -135,7 +135,7 @@ class _MyEarningstabsState extends State<MyEarningstabs> {
                         _tabNames[index],
                         style: TextStyle(
                           fontSize: 18,
-                          fontWeight: FontWeight.bold,
+                          fontFamily: 'SatoshiBold',
                           color: _selectedIndex == index
                               ? const Color(0xFF29B2FE)
                               : Colors.grey,
@@ -163,7 +163,7 @@ class _MyEarningstabsState extends State<MyEarningstabs> {
                   boxShadow: [
                     BoxShadow(
                       color: Colors.grey.withOpacity(0.3),
-                      spreadRadius: 2,
+                      spreadRadius: 0,
                       blurRadius: 7,
                       offset: const Offset(
                           0, 0), // changes the position of the shadow
@@ -200,14 +200,15 @@ class _MyEarningstabsState extends State<MyEarningstabs> {
                             Text(
                               'Order: ${order["orderNumber"]}',
                               style: const TextStyle(
-                                  fontSize: 13.0, fontWeight: FontWeight.w600),
+                                  fontSize: 13.0,
+                                fontFamily: 'SatoshiBold'),
                             ),
                             // SizedBox(height: 5.0),
                             Text(
                               '${order["time"]}',
                               style: const TextStyle(
                                   fontSize: 10.0,
-                                  fontWeight: FontWeight.w600,
+                                  fontFamily: 'SatoshiMedium',
                                   color: Colors.grey),
                             ),
                           ],
@@ -216,9 +217,9 @@ class _MyEarningstabsState extends State<MyEarningstabs> {
                         if (order["onlineMode"] == "Yes")
                           Text(
                             '${order["earning"]}',
-                            style: const TextStyle(
+                            style: TextStyle(
                                 fontSize: 13.0,
-                                fontWeight: FontWeight.w600,
+                                fontFamily : "SatoshiBold",
                                 color: Color(0xFF29B2FE)),
                           ),
                         if (order["onlineMode"] == "No")
@@ -226,7 +227,7 @@ class _MyEarningstabsState extends State<MyEarningstabs> {
                             '${order["earning"]}',
                             style: const TextStyle(
                                 fontSize: 13.0,
-                                fontWeight: FontWeight.w600,
+                                fontFamily : "SatoshiBold",
                                 color: Color(0xFF13A32B)),
                           ),
                       ],

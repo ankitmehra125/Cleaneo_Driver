@@ -1,4 +1,6 @@
+import 'package:cleaneo_driver_app/Home/BotNav.dart';
 import 'package:cleaneo_driver_app/Screens/Auth/Login.dart';
+import 'package:cleaneo_driver_app/Screens/Auth/Signup.dart';
 import 'package:cleaneo_driver_app/Screens/Driver_Onboarding/DL.dart';
 import 'package:cleaneo_driver_app/Screens/Driver_Onboarding/uploadPAN.dart';
 import 'package:flutter/material.dart';
@@ -45,14 +47,14 @@ class _OTPPageState extends State<OTPPage> {
             BoxShadow(
               color: Colors.grey.withOpacity(0.45),
               spreadRadius: 0,
-              blurRadius: 10,
+              blurRadius: 7,
               offset: Offset(0, 0), // changes the position of the shadow
             ),
           ],
         ),
         textStyle: TextStyle(
             fontSize: mQuery.size.height * 0.04,
-            fontWeight: FontWeight.w800
+            fontFamily: 'SatoshiBold'
              ));
     return Scaffold(
       body: Container(
@@ -76,7 +78,7 @@ class _OTPPageState extends State<OTPPage> {
                     onTap: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) {
-                        return LoginPage();
+                        return Otp == "Login" ?  LoginPage() : SignUpPage();
                       }));
                     },
                     child: Icon(
@@ -90,9 +92,9 @@ class _OTPPageState extends State<OTPPage> {
                   Text(
                     "Verify Phone Number",
                     style: TextStyle(
-                      fontSize: mQuery.size.height * 0.025,
+                      fontSize: 20,
                       color: Colors.white,
-                      fontFamily: 'PoppinsSemiBold',
+                      fontFamily: 'SatoshiBold',
                     ),
                   )
                 ],
@@ -117,16 +119,15 @@ class _OTPPageState extends State<OTPPage> {
                         Text(
                           "Enter 4 Digit Code",
                           style: TextStyle(
-                            fontSize: mQuery.size.height * 0.025,
-                            fontFamily: 'PoppinsSemiBold',
-                          ),
+                              fontSize: mQuery.size.height * 0.0215,
+                              fontFamily: 'SatoshiBold'),
                         ),
                         SizedBox(height: mQuery.size.height * 0.006),
                         Text(
                           "Sent to $phoneNo",
                           style: TextStyle(
-                              fontSize: mQuery.size.height * 0.015,
-                              fontFamily: 'PoppinsSemiBold',
+                              fontSize: mQuery.size.height * 0.018,
+                              fontFamily: 'SatoshiRegular',
                               color: Colors.black87),
                         ),
                         SizedBox(height: mQuery.size.height * 0.04),
@@ -135,12 +136,11 @@ class _OTPPageState extends State<OTPPage> {
                           defaultPinTheme: defaultPinTheme,
                         ),
                         SizedBox(height: mQuery.size.height * 0.1),
-                        Text(
-                          "Problems receiving the code?",
-                          style: TextStyle(
-                            fontSize: mQuery.size.height * 0.015,
-                            fontFamily: 'PoppinsSemiBold',
-                          ),
+                    Text(
+                      "Problems receiving the code?",
+                      style: TextStyle(
+                          fontSize: mQuery.size.height * 0.018,
+                          fontFamily: 'SatoshiBold'),
                         ),
                         SizedBox(height: mQuery.size.height * 0.008),
                         Row(
@@ -153,10 +153,9 @@ class _OTPPageState extends State<OTPPage> {
                             Text(
                               "RESEND",
                               style: TextStyle(
-                                color: Color(0xff29b2fe),
-                                fontSize: mQuery.size.height * 0.015,
-                                fontFamily: 'PoppinsBold',
-                              ),
+                                  color: const Color(0xff29b2fe),
+                                  fontSize: mQuery.size.height * 0.018,
+                                  fontFamily: 'SatoshiBold'),
                             )
                           ],
                         ),
@@ -165,7 +164,7 @@ class _OTPPageState extends State<OTPPage> {
                           onTap: () {
                             Navigator.push(context,
                                 MaterialPageRoute(builder: (context) {
-                              return DL();
+                              return logedIn == "Login" ? BotNav() :  DL();
                             }));
                           },
                           child: Container(
@@ -178,9 +177,9 @@ class _OTPPageState extends State<OTPPage> {
                               child: Text(
                                 "Verify",
                                 style: TextStyle(
-                                  fontSize: mQuery.size.height * 0.02,
+                                  fontSize: 16,
                                   color: Colors.white,
-                                  fontFamily: 'PoppinsSemiBold',
+                                  fontFamily: 'SatoshiBold',
                                 ),
                               ),
                             ),

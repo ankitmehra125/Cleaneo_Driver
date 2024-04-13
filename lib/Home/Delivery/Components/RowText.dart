@@ -468,7 +468,7 @@ class _TwoTextState extends State<TwoText> {
                             style: TextStyle(
                                 color: const Color.fromARGB(255, 181, 181, 181),
                                 fontSize: mQuery.size.height * 0.012,
-                                fontFamily: 'PoppinsSemiBold'),
+                                fontFamily: 'SatoshiBold'),
                           ),
                         ],
                       ),
@@ -533,7 +533,7 @@ class _TwoTextState extends State<TwoText> {
                                                       color: Colors.black,
                                                       fontSize:
                                                           mQuery.size.height * 0.015,
-                                                      fontFamily: 'PoppinsSemiBold'),
+                                                      fontFamily: 'SatoshiBold'),
                                                 ),
                                                 Text("COD",style: TextStyle(
                                                     fontSize: 10
@@ -563,7 +563,7 @@ class _TwoTextState extends State<TwoText> {
                                                     255, 152, 152, 152),
                                                 fontSize:
                                                     mQuery.size.height * 0.012,
-                                                fontFamily: 'PoppinsSemiBold'),
+                                                fontFamily: 'SatoshiBold'),
                                           ),
                                         ],
                                       ),
@@ -586,7 +586,7 @@ class _TwoTextState extends State<TwoText> {
                                                 color: Colors.black87,
                                                 fontSize:
                                                     mQuery.size.height * 0.012,
-                                                fontFamily: 'PoppinsMedium'),
+                                                fontFamily: 'SatoshiMedium'),
                                           ),
                                         ],
                                       ),
@@ -606,7 +606,7 @@ class _TwoTextState extends State<TwoText> {
                                                     255, 152, 152, 152),
                                                 fontSize:
                                                     mQuery.size.height * 0.012,
-                                                fontFamily: 'PoppinsSemiBold'),
+                                                fontFamily: 'SatoshiBold'),
                                           ),
                                         ],
                                       ),
@@ -635,7 +635,7 @@ class _TwoTextState extends State<TwoText> {
                                                     color: Colors.black87,
                                                     fontSize: mQuery.size.height *
                                                         0.012,
-                                                    fontFamily: 'PoppinsMedium'),
+                                                    fontFamily: 'SatoshiMedium'),
                                               ),
                                               Text(
                                                 '${order['number']}',
@@ -643,7 +643,7 @@ class _TwoTextState extends State<TwoText> {
                                                     color: Colors.black87,
                                                     fontSize: mQuery.size.height *
                                                         0.012,
-                                                    fontFamily: 'PoppinsMedium'),
+                                                    fontFamily: 'SatoshiMedium'),
                                               ),
                                             ],
                                           )
@@ -676,7 +676,7 @@ class _TwoTextState extends State<TwoText> {
                                         style: TextStyle(
                                             color: Colors.white,
                                             fontSize: mQuery.size.height * 0.012,
-                                            fontFamily: 'PoppinsSemiBold'),
+                                            fontFamily: 'SatoshiBold'),
                                       ),
                                     ),
                                   ),
